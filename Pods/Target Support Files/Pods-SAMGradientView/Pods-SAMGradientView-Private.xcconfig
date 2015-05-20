@@ -1,0 +1,6 @@
+#include "Pods-SAMGradientView.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/SAMGradientView" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ASValueTrackingSlider" "${PODS_ROOT}/Headers/Public/BEMAnalogClock" "${PODS_ROOT}/Headers/Public/CHCircleGaugeView" "${PODS_ROOT}/Headers/Public/DKCircleButton" "${PODS_ROOT}/Headers/Public/LLSimpleCamera" "${PODS_ROOT}/Headers/Public/NYSegmentedControl" "${PODS_ROOT}/Headers/Public/SAMGradientView" "${PODS_ROOT}/Headers/Public/VBFPopFlatButton" "${PODS_ROOT}/Headers/Public/iOS-color-wheel" "${PODS_ROOT}/Headers/Public/pop"
+OTHER_LDFLAGS = ${PODS_SAMGRADIENTVIEW_OTHER_LDFLAGS} -ObjC
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

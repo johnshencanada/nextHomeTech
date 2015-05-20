@@ -1,0 +1,8 @@
+CLANG_CXX_LANGUAGE_STANDARD = c++11
+CLANG_CXX_LIBRARY = libc++
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ASValueTrackingSlider" "${PODS_ROOT}/Headers/Public/BEMAnalogClock" "${PODS_ROOT}/Headers/Public/CHCircleGaugeView" "${PODS_ROOT}/Headers/Public/DKCircleButton" "${PODS_ROOT}/Headers/Public/LLSimpleCamera" "${PODS_ROOT}/Headers/Public/NYSegmentedControl" "${PODS_ROOT}/Headers/Public/SAMGradientView" "${PODS_ROOT}/Headers/Public/VBFPopFlatButton" "${PODS_ROOT}/Headers/Public/iOS-color-wheel" "${PODS_ROOT}/Headers/Public/pop"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/ASValueTrackingSlider" -isystem "${PODS_ROOT}/Headers/Public/BEMAnalogClock" -isystem "${PODS_ROOT}/Headers/Public/CHCircleGaugeView" -isystem "${PODS_ROOT}/Headers/Public/DKCircleButton" -isystem "${PODS_ROOT}/Headers/Public/LLSimpleCamera" -isystem "${PODS_ROOT}/Headers/Public/NYSegmentedControl" -isystem "${PODS_ROOT}/Headers/Public/SAMGradientView" -isystem "${PODS_ROOT}/Headers/Public/VBFPopFlatButton" -isystem "${PODS_ROOT}/Headers/Public/iOS-color-wheel" -isystem "${PODS_ROOT}/Headers/Public/pop"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-ASValueTrackingSlider" -l"Pods-BEMAnalogClock" -l"Pods-CHCircleGaugeView" -l"Pods-DKCircleButton" -l"Pods-LLSimpleCamera" -l"Pods-NYSegmentedControl" -l"Pods-SAMGradientView" -l"Pods-VBFPopFlatButton" -l"Pods-iOS-color-wheel" -l"Pods-pop" -l"c++" -framework "AVFoundation" -framework "CoreGraphics" -framework "Foundation" -framework "QuartzCore" -framework "UIKit"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods

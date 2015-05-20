@@ -1,0 +1,804 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5200820B19639C8D00B2F433 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5200820A19639C8D00B2F433 /* main.m */; };
+		5200820E19639C8D00B2F433 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5200820D19639C8D00B2F433 /* AppDelegate.m */; };
+		5200821419639C8D00B2F433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5200821219639C8D00B2F433 /* Main.storyboard */; };
+		5200821619639C8D00B2F433 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5200821519639C8D00B2F433 /* Images.xcassets */; };
+		5200822219639C8D00B2F433 /* BluetoothTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5200822119639C8D00B2F433 /* BluetoothTests.m */; };
+		5200822C1963A47900B2F433 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5200822B1963A47900B2F433 /* CoreBluetooth.framework */; };
+		5201847D199E1444009573B3 /* BrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5201847C199E1444009573B3 /* BrightnessView.m */; };
+		521A24CA1AFFF99700AA3E6F /* ProximityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521A24C91AFFF99700AA3E6F /* ProximityViewController.m */; };
+		521D6AC21A428BF3000E68F0 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521D6AC11A428BF3000E68F0 /* ExternalAccessory.framework */; };
+		5247D6891A16FE4C00EE800B /* nextDuinoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5247D6881A16FE4C00EE800B /* nextDuinoViewController.m */; };
+		5247D68F1A1705EE00EE800B /* CNBluetoothCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = 5247D68E1A1705EE00EE800B /* CNBluetoothCentral.m */; };
+		5248BFEF1B0B0C5D00A83DD0 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5248BFEE1B0B0C5D00A83DD0 /* TimerViewController.m */; };
+		5256A43819C2B6DA001B5664 /* NewRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5256A43719C2B6DA001B5664 /* NewRoomViewController.m */; };
+		5256A43B19C2B712001B5664 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5256A43A19C2B712001B5664 /* HomeViewController.m */; };
+		5256A43D19C3DB4D001B5664 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5256A43C19C3DB4D001B5664 /* HomeKit.framework */; };
+		525864701AC8984300596EC5 /* NewRoomChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5258646F1AC8984300596EC5 /* NewRoomChildViewController.m */; };
+		5268E64819A00BF300E8C3CC /* Dashboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5268E64719A00BF300E8C3CC /* Dashboard.m */; };
+		526DC48D1A462DD70054B463 /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526DC48C1A462DD70054B463 /* ChildViewController.m */; };
+		526DC4931A462EA80054B463 /* NewActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526DC4921A462EA80054B463 /* NewActionViewController.m */; };
+		52733B6F1A7325F0006EA793 /* railway.gif in Resources */ = {isa = PBXBuildFile; fileRef = 52733B6E1A7325F0006EA793 /* railway.gif */; };
+		52733B721A73265A006EA793 /* BackgroundGifViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52733B711A73265A006EA793 /* BackgroundGifViewController.m */; };
+		52733B751A736DD3006EA793 /* IntroductionChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52733B741A736DD3006EA793 /* IntroductionChildViewController.m */; };
+		527870CC19C9163A00FEBAE8 /* LightBulbRoomCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 527870CB19C9163A00FEBAE8 /* LightBulbRoomCollectionViewController.m */; };
+		527870CF19C95C6100FEBAE8 /* RoomPictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 527870CE19C95C6100FEBAE8 /* RoomPictureCell.m */; };
+		527BBADF1A2BDC130097ECC6 /* RoomLogoButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BBADE1A2BDC130097ECC6 /* RoomLogoButton.m */; };
+		52A04DEF19B1730D008EF273 /* LightBulbTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A04DEE19B1730D008EF273 /* LightBulbTimerViewController.m */; };
+		52A279C019AA76D200F0C597 /* StatusLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A279BF19AA76D200F0C597 /* StatusLabel.m */; };
+		52A6DFBF1A49F13800541587 /* AYVibrantButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A6DFBE1A49F13800541587 /* AYVibrantButton.m */; };
+		52A72FA51B06B50D007A1C4A /* RSSITranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A72FA41B06B50D007A1C4A /* RSSITranslator.m */; };
+		52B13CA719824287006EC977 /* CircleCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B13CA619824287006EC977 /* CircleCounter.m */; };
+		52B99D7C1ADF9D03004C6772 /* BlackCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B99D7B1ADF9D03004C6772 /* BlackCircle.m */; };
+		52D0465419662D68004F429A /* DevicesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D0465319662D68004F429A /* DevicesCollectionViewController.m */; };
+		52D0465719662EA6004F429A /* DeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D0465619662EA6004F429A /* DeviceCell.m */; };
+		52D0465A19663254004F429A /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D0465919663254004F429A /* Device.m */; };
+		52DC62B7198F9B9500E8FE18 /* LightBulbColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DC62B6198F9B9500E8FE18 /* LightBulbColorViewController.m */; };
+		52DC62BA198F9BA400E8FE18 /* LightBulbRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DC62B9198F9BA400E8FE18 /* LightBulbRoomViewController.m */; };
+		52E7ADF01964DA6100D8D9BE /* MyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E7ADEF1964DA6100D8D9BE /* MyNavigationController.m */; };
+		52F4037719A85F0A00879F26 /* RoomsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F4037619A85F0A00879F26 /* RoomsCollectionViewController.m */; };
+		52F4037A19A85F2600879F26 /* RoomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F4037919A85F2600879F26 /* RoomCell.m */; };
+		52F4037D19A8869D00879F26 /* HeaderCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F4037C19A8869D00879F26 /* HeaderCellView.m */; };
+		52F536F61A770FAA009A34BE /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F536F51A770FAA009A34BE /* Launch Screen.xib */; };
+		52FB1BE81A43EFC000AAB83E /* TimedActionCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FB1BE71A43EFC000AAB83E /* TimedActionCollectionViewController.m */; };
+		52FB1BEB1A43FCC300AAB83E /* ClockCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FB1BEA1A43FCC300AAB83E /* ClockCell.m */; };
+		D81A252D3CC248A7B40F7644 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E992773B23C455DBAA429AC /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5200821C19639C8D00B2F433 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 520081FD19639C8D00B2F433 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5200820419639C8D00B2F433;
+			remoteInfo = Bluetooth;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		52A6DFD51A4C028800541587 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5200820519639C8D00B2F433 /* nextHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nextHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5200820919639C8D00B2F433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5200820A19639C8D00B2F433 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5200820C19639C8D00B2F433 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5200820D19639C8D00B2F433 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5200821319639C8D00B2F433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5200821519639C8D00B2F433 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5200821B19639C8D00B2F433 /* nextHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nextHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5200822019639C8D00B2F433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5200822119639C8D00B2F433 /* BluetoothTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BluetoothTests.m; sourceTree = "<group>"; };
+		5200822B1963A47900B2F433 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		5201847B199E1444009573B3 /* BrightnessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrightnessView.h; sourceTree = "<group>"; };
+		5201847C199E1444009573B3 /* BrightnessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrightnessView.m; sourceTree = "<group>"; };
+		521A24C81AFFF99700AA3E6F /* ProximityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProximityViewController.h; sourceTree = "<group>"; };
+		521A24C91AFFF99700AA3E6F /* ProximityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProximityViewController.m; sourceTree = "<group>"; };
+		521D6AC11A428BF3000E68F0 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		521D6AC31A428BF3000E68F0 /* nextHome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = nextHome.entitlements; sourceTree = "<group>"; };
+		5247D6871A16FE4C00EE800B /* nextDuinoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nextDuinoViewController.h; sourceTree = "<group>"; };
+		5247D6881A16FE4C00EE800B /* nextDuinoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nextDuinoViewController.m; sourceTree = "<group>"; };
+		5247D68D1A1705EE00EE800B /* CNBluetoothCentral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNBluetoothCentral.h; sourceTree = "<group>"; };
+		5247D68E1A1705EE00EE800B /* CNBluetoothCentral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNBluetoothCentral.m; sourceTree = "<group>"; };
+		5248BFED1B0B0C5D00A83DD0 /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		5248BFEE1B0B0C5D00A83DD0 /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		5256A43619C2B6DA001B5664 /* NewRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRoomViewController.h; sourceTree = "<group>"; };
+		5256A43719C2B6DA001B5664 /* NewRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRoomViewController.m; sourceTree = "<group>"; };
+		5256A43919C2B712001B5664 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		5256A43A19C2B712001B5664 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		5256A43C19C3DB4D001B5664 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		5258646E1AC8984300596EC5 /* NewRoomChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRoomChildViewController.h; sourceTree = "<group>"; };
+		5258646F1AC8984300596EC5 /* NewRoomChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRoomChildViewController.m; sourceTree = "<group>"; };
+		5268E64619A00BF300E8C3CC /* Dashboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dashboard.h; sourceTree = "<group>"; };
+		5268E64719A00BF300E8C3CC /* Dashboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dashboard.m; sourceTree = "<group>"; };
+		526DC48B1A462DD70054B463 /* ChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
+		526DC48C1A462DD70054B463 /* ChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
+		526DC4911A462EA80054B463 /* NewActionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewActionViewController.h; sourceTree = "<group>"; };
+		526DC4921A462EA80054B463 /* NewActionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewActionViewController.m; sourceTree = "<group>"; };
+		52733B6E1A7325F0006EA793 /* railway.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = railway.gif; sourceTree = "<group>"; };
+		52733B701A73265A006EA793 /* BackgroundGifViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundGifViewController.h; sourceTree = "<group>"; };
+		52733B711A73265A006EA793 /* BackgroundGifViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundGifViewController.m; sourceTree = "<group>"; };
+		52733B731A736DD3006EA793 /* IntroductionChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroductionChildViewController.h; sourceTree = "<group>"; };
+		52733B741A736DD3006EA793 /* IntroductionChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroductionChildViewController.m; sourceTree = "<group>"; };
+		527870CA19C9163A00FEBAE8 /* LightBulbRoomCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LightBulbRoomCollectionViewController.h; path = Bluetooth/LightBulbRoomCollectionViewController.h; sourceTree = "<group>"; };
+		527870CB19C9163A00FEBAE8 /* LightBulbRoomCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LightBulbRoomCollectionViewController.m; path = Bluetooth/LightBulbRoomCollectionViewController.m; sourceTree = "<group>"; };
+		527870CD19C95C6100FEBAE8 /* RoomPictureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomPictureCell.h; sourceTree = "<group>"; };
+		527870CE19C95C6100FEBAE8 /* RoomPictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomPictureCell.m; sourceTree = "<group>"; };
+		527BBADD1A2BDC130097ECC6 /* RoomLogoButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomLogoButton.h; sourceTree = "<group>"; };
+		527BBADE1A2BDC130097ECC6 /* RoomLogoButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomLogoButton.m; sourceTree = "<group>"; };
+		52A04DED19B1730D008EF273 /* LightBulbTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LightBulbTimerViewController.h; path = Bluetooth/LightBulbTimerViewController.h; sourceTree = "<group>"; };
+		52A04DEE19B1730D008EF273 /* LightBulbTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LightBulbTimerViewController.m; path = Bluetooth/LightBulbTimerViewController.m; sourceTree = "<group>"; };
+		52A279BE19AA76D200F0C597 /* StatusLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusLabel.h; sourceTree = "<group>"; };
+		52A279BF19AA76D200F0C597 /* StatusLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusLabel.m; sourceTree = "<group>"; };
+		52A6DFBD1A49F13800541587 /* AYVibrantButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYVibrantButton.h; sourceTree = "<group>"; };
+		52A6DFBE1A49F13800541587 /* AYVibrantButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYVibrantButton.m; sourceTree = "<group>"; };
+		52A6DFC51A4C028800541587 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		52A72FA41B06B50D007A1C4A /* RSSITranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSITranslator.m; sourceTree = "<group>"; };
+		52B13CA519824287006EC977 /* CircleCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCounter.h; sourceTree = "<group>"; };
+		52B13CA619824287006EC977 /* CircleCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCounter.m; sourceTree = "<group>"; };
+		52B99D7A1ADF9D03004C6772 /* BlackCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackCircle.h; sourceTree = "<group>"; };
+		52B99D7B1ADF9D03004C6772 /* BlackCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackCircle.m; sourceTree = "<group>"; };
+		52D0465219662D68004F429A /* DevicesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevicesCollectionViewController.h; sourceTree = "<group>"; };
+		52D0465319662D68004F429A /* DevicesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevicesCollectionViewController.m; sourceTree = "<group>"; };
+		52D0465519662EA6004F429A /* DeviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceCell.h; sourceTree = "<group>"; };
+		52D0465619662EA6004F429A /* DeviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceCell.m; sourceTree = "<group>"; };
+		52D0465819663254004F429A /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		52D0465919663254004F429A /* Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
+		52DC62B5198F9B9500E8FE18 /* LightBulbColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LightBulbColorViewController.h; path = Bluetooth/LightBulbColorViewController.h; sourceTree = "<group>"; };
+		52DC62B6198F9B9500E8FE18 /* LightBulbColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LightBulbColorViewController.m; path = Bluetooth/LightBulbColorViewController.m; sourceTree = "<group>"; };
+		52DC62B8198F9BA400E8FE18 /* LightBulbRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LightBulbRoomViewController.h; path = Bluetooth/LightBulbRoomViewController.h; sourceTree = "<group>"; };
+		52DC62B9198F9BA400E8FE18 /* LightBulbRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LightBulbRoomViewController.m; path = Bluetooth/LightBulbRoomViewController.m; sourceTree = "<group>"; };
+		52E7ADEE1964DA6100D8D9BE /* MyNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationController.h; sourceTree = "<group>"; };
+		52E7ADEF1964DA6100D8D9BE /* MyNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationController.m; sourceTree = "<group>"; };
+		52F4037519A85F0A00879F26 /* RoomsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomsCollectionViewController.h; sourceTree = "<group>"; };
+		52F4037619A85F0A00879F26 /* RoomsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomsCollectionViewController.m; sourceTree = "<group>"; };
+		52F4037819A85F2600879F26 /* RoomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomCell.h; sourceTree = "<group>"; };
+		52F4037919A85F2600879F26 /* RoomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomCell.m; sourceTree = "<group>"; };
+		52F4037B19A8869D00879F26 /* HeaderCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderCellView.h; sourceTree = "<group>"; };
+		52F4037C19A8869D00879F26 /* HeaderCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderCellView.m; sourceTree = "<group>"; };
+		52F536F51A770FAA009A34BE /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		52FB1BE61A43EFC000AAB83E /* TimedActionCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimedActionCollectionViewController.h; path = ../TimedActionCollectionViewController.h; sourceTree = "<group>"; };
+		52FB1BE71A43EFC000AAB83E /* TimedActionCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimedActionCollectionViewController.m; path = ../TimedActionCollectionViewController.m; sourceTree = "<group>"; };
+		52FB1BE91A43FCC300AAB83E /* ClockCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockCell.h; sourceTree = "<group>"; };
+		52FB1BEA1A43FCC300AAB83E /* ClockCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockCell.m; sourceTree = "<group>"; };
+		7E992773B23C455DBAA429AC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F53850D7D816137420CDB0EC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F625610C2C93277F685A84D9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5200820219639C8D00B2F433 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5256A43D19C3DB4D001B5664 /* HomeKit.framework in Frameworks */,
+				5200822C1963A47900B2F433 /* CoreBluetooth.framework in Frameworks */,
+				521D6AC21A428BF3000E68F0 /* ExternalAccessory.framework in Frameworks */,
+				D81A252D3CC248A7B40F7644 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5200821819639C8D00B2F433 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F32CFD9ECD2235D2AD622C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F625610C2C93277F685A84D9 /* Pods.debug.xcconfig */,
+				F53850D7D816137420CDB0EC /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		520081FC19639C8D00B2F433 = {
+			isa = PBXGroup;
+			children = (
+				521D6AC31A428BF3000E68F0 /* nextHome.entitlements */,
+				5200822B1963A47900B2F433 /* CoreBluetooth.framework */,
+				5200820719639C8D00B2F433 /* Bluetooth */,
+				5200821E19639C8D00B2F433 /* BluetoothTests */,
+				5200820619639C8D00B2F433 /* Products */,
+				C5769B1A91854D98A969A1C3 /* Frameworks */,
+				4F32CFD9ECD2235D2AD622C1 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		5200820619639C8D00B2F433 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5200820519639C8D00B2F433 /* nextHome.app */,
+				5200821B19639C8D00B2F433 /* nextHomeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5200820719639C8D00B2F433 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				5200820C19639C8D00B2F433 /* AppDelegate.h */,
+				5200820D19639C8D00B2F433 /* AppDelegate.m */,
+				52733B761A737616006EA793 /* image */,
+				52733B6D1A7325CD006EA793 /* Introduction */,
+				52D046501965E3F1004F429A /* Model */,
+				52D0464F1965E3E9004F429A /* View */,
+				52D046511965E3FA004F429A /* Controller */,
+				5247D68A1A16FE5800EE800B /* nextDuino */,
+				5200820819639C8D00B2F433 /* Supporting Files */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		5200820819639C8D00B2F433 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5200820919639C8D00B2F433 /* Info.plist */,
+				5200820A19639C8D00B2F433 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5200821E19639C8D00B2F433 /* BluetoothTests */ = {
+			isa = PBXGroup;
+			children = (
+				5200822119639C8D00B2F433 /* BluetoothTests.m */,
+				5200821F19639C8D00B2F433 /* Supporting Files */,
+			);
+			path = BluetoothTests;
+			sourceTree = "<group>";
+		};
+		5200821F19639C8D00B2F433 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5200822019639C8D00B2F433 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5247D68A1A16FE5800EE800B /* nextDuino */ = {
+			isa = PBXGroup;
+			children = (
+				5247D68D1A1705EE00EE800B /* CNBluetoothCentral.h */,
+				5247D68E1A1705EE00EE800B /* CNBluetoothCentral.m */,
+				5247D6871A16FE4C00EE800B /* nextDuinoViewController.h */,
+				5247D6881A16FE4C00EE800B /* nextDuinoViewController.m */,
+			);
+			name = nextDuino;
+			sourceTree = "<group>";
+		};
+		5247D68B1A16FE8400EE800B /* nextBulb */ = {
+			isa = PBXGroup;
+			children = (
+				52DC62B5198F9B9500E8FE18 /* LightBulbColorViewController.h */,
+				52DC62B6198F9B9500E8FE18 /* LightBulbColorViewController.m */,
+				52A04DED19B1730D008EF273 /* LightBulbTimerViewController.h */,
+				52A04DEE19B1730D008EF273 /* LightBulbTimerViewController.m */,
+				52DC62B8198F9BA400E8FE18 /* LightBulbRoomViewController.h */,
+				52DC62B9198F9BA400E8FE18 /* LightBulbRoomViewController.m */,
+				527870CA19C9163A00FEBAE8 /* LightBulbRoomCollectionViewController.h */,
+				527870CB19C9163A00FEBAE8 /* LightBulbRoomCollectionViewController.m */,
+			);
+			name = nextBulb;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		5247D68C1A16FEC600EE800B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5256A43919C2B712001B5664 /* HomeViewController.h */,
+				5256A43A19C2B712001B5664 /* HomeViewController.m */,
+				5256A43619C2B6DA001B5664 /* NewRoomViewController.h */,
+				5256A43719C2B6DA001B5664 /* NewRoomViewController.m */,
+				5258646E1AC8984300596EC5 /* NewRoomChildViewController.h */,
+				5258646F1AC8984300596EC5 /* NewRoomChildViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		526DC4871A462B8A0054B463 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				52FB1BE61A43EFC000AAB83E /* TimedActionCollectionViewController.h */,
+				52FB1BE71A43EFC000AAB83E /* TimedActionCollectionViewController.m */,
+				526DC4911A462EA80054B463 /* NewActionViewController.h */,
+				526DC4921A462EA80054B463 /* NewActionViewController.m */,
+				526DC48B1A462DD70054B463 /* ChildViewController.h */,
+				526DC48C1A462DD70054B463 /* ChildViewController.m */,
+				521A24C81AFFF99700AA3E6F /* ProximityViewController.h */,
+				521A24C91AFFF99700AA3E6F /* ProximityViewController.m */,
+				5248BFED1B0B0C5D00A83DD0 /* TimerViewController.h */,
+				5248BFEE1B0B0C5D00A83DD0 /* TimerViewController.m */,
+			);
+			name = Action;
+			sourceTree = "<group>";
+		};
+		52733B6D1A7325CD006EA793 /* Introduction */ = {
+			isa = PBXGroup;
+			children = (
+				52733B701A73265A006EA793 /* BackgroundGifViewController.h */,
+				52733B711A73265A006EA793 /* BackgroundGifViewController.m */,
+				52733B731A736DD3006EA793 /* IntroductionChildViewController.h */,
+				52733B741A736DD3006EA793 /* IntroductionChildViewController.m */,
+			);
+			name = Introduction;
+			sourceTree = "<group>";
+		};
+		52733B761A737616006EA793 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				52733B6E1A7325F0006EA793 /* railway.gif */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
+		52D0464F1965E3E9004F429A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5200821519639C8D00B2F433 /* Images.xcassets */,
+				52F536F51A770FAA009A34BE /* Launch Screen.xib */,
+				5268E64619A00BF300E8C3CC /* Dashboard.h */,
+				5268E64719A00BF300E8C3CC /* Dashboard.m */,
+				52F4037B19A8869D00879F26 /* HeaderCellView.h */,
+				52F4037C19A8869D00879F26 /* HeaderCellView.m */,
+				52F4037819A85F2600879F26 /* RoomCell.h */,
+				52F4037919A85F2600879F26 /* RoomCell.m */,
+				52B99D7A1ADF9D03004C6772 /* BlackCircle.h */,
+				52B99D7B1ADF9D03004C6772 /* BlackCircle.m */,
+				527BBADD1A2BDC130097ECC6 /* RoomLogoButton.h */,
+				527BBADE1A2BDC130097ECC6 /* RoomLogoButton.m */,
+				527870CD19C95C6100FEBAE8 /* RoomPictureCell.h */,
+				527870CE19C95C6100FEBAE8 /* RoomPictureCell.m */,
+				52A279BE19AA76D200F0C597 /* StatusLabel.h */,
+				52A279BF19AA76D200F0C597 /* StatusLabel.m */,
+				52D0465519662EA6004F429A /* DeviceCell.h */,
+				52D0465619662EA6004F429A /* DeviceCell.m */,
+				52FB1BE91A43FCC300AAB83E /* ClockCell.h */,
+				52FB1BEA1A43FCC300AAB83E /* ClockCell.m */,
+				5201847B199E1444009573B3 /* BrightnessView.h */,
+				5201847C199E1444009573B3 /* BrightnessView.m */,
+				52B13CA519824287006EC977 /* CircleCounter.h */,
+				52B13CA619824287006EC977 /* CircleCounter.m */,
+				52A6DFBD1A49F13800541587 /* AYVibrantButton.h */,
+				52A6DFBE1A49F13800541587 /* AYVibrantButton.m */,
+				5200821219639C8D00B2F433 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		52D046501965E3F1004F429A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52D0465819663254004F429A /* Device.h */,
+				52D0465919663254004F429A /* Device.m */,
+				52A72FA41B06B50D007A1C4A /* RSSITranslator.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		52D046511965E3FA004F429A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				52E7ADEE1964DA6100D8D9BE /* MyNavigationController.h */,
+				52E7ADEF1964DA6100D8D9BE /* MyNavigationController.m */,
+				52F4037519A85F0A00879F26 /* RoomsCollectionViewController.h */,
+				52F4037619A85F0A00879F26 /* RoomsCollectionViewController.m */,
+				52D0465219662D68004F429A /* DevicesCollectionViewController.h */,
+				52D0465319662D68004F429A /* DevicesCollectionViewController.m */,
+				5247D68C1A16FEC600EE800B /* Home */,
+				526DC4871A462B8A0054B463 /* Action */,
+				5247D68B1A16FE8400EE800B /* nextBulb */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C5769B1A91854D98A969A1C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				521D6AC11A428BF3000E68F0 /* ExternalAccessory.framework */,
+				5256A43C19C3DB4D001B5664 /* HomeKit.framework */,
+				7E992773B23C455DBAA429AC /* libPods.a */,
+				52A6DFC51A4C028800541587 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5200820419639C8D00B2F433 /* nextHome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5200822519639C8D00B2F433 /* Build configuration list for PBXNativeTarget "nextHome" */;
+			buildPhases = (
+				D38F2E66276B45CEA2960E02 /* Check Pods Manifest.lock */,
+				5200820119639C8D00B2F433 /* Sources */,
+				5200820219639C8D00B2F433 /* Frameworks */,
+				5200820319639C8D00B2F433 /* Resources */,
+				17711DEB838D47BAB8F5655A /* Copy Pods Resources */,
+				52A6DFD51A4C028800541587 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nextHome;
+			productName = Bluetooth;
+			productReference = 5200820519639C8D00B2F433 /* nextHome.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5200821A19639C8D00B2F433 /* nextHomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5200822819639C8D00B2F433 /* Build configuration list for PBXNativeTarget "nextHomeTests" */;
+			buildPhases = (
+				5200821719639C8D00B2F433 /* Sources */,
+				5200821819639C8D00B2F433 /* Frameworks */,
+				5200821919639C8D00B2F433 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5200821D19639C8D00B2F433 /* PBXTargetDependency */,
+			);
+			name = nextHomeTests;
+			productName = BluetoothTests;
+			productReference = 5200821B19639C8D00B2F433 /* nextHomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		520081FD19639C8D00B2F433 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Banana Technology";
+				TargetAttributes = {
+					5200820419639C8D00B2F433 = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 5JE8Y2Q737;
+						SystemCapabilities = {
+							com.apple.HomeKit = {
+								enabled = 1;
+							};
+							com.apple.WAC = {
+								enabled = 1;
+							};
+						};
+					};
+					5200821A19639C8D00B2F433 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 5200820419639C8D00B2F433;
+					};
+				};
+			};
+			buildConfigurationList = 5200820019639C8D00B2F433 /* Build configuration list for PBXProject "nextHome" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 520081FC19639C8D00B2F433;
+			productRefGroup = 5200820619639C8D00B2F433 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5200820419639C8D00B2F433 /* nextHome */,
+				5200821A19639C8D00B2F433 /* nextHomeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5200820319639C8D00B2F433 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52733B6F1A7325F0006EA793 /* railway.gif in Resources */,
+				52F536F61A770FAA009A34BE /* Launch Screen.xib in Resources */,
+				5200821419639C8D00B2F433 /* Main.storyboard in Resources */,
+				5200821619639C8D00B2F433 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5200821919639C8D00B2F433 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17711DEB838D47BAB8F5655A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D38F2E66276B45CEA2960E02 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5200820119639C8D00B2F433 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52FB1BE81A43EFC000AAB83E /* TimedActionCollectionViewController.m in Sources */,
+				52733B751A736DD3006EA793 /* IntroductionChildViewController.m in Sources */,
+				5248BFEF1B0B0C5D00A83DD0 /* TimerViewController.m in Sources */,
+				52D0465419662D68004F429A /* DevicesCollectionViewController.m in Sources */,
+				5268E64819A00BF300E8C3CC /* Dashboard.m in Sources */,
+				5200820E19639C8D00B2F433 /* AppDelegate.m in Sources */,
+				527870CC19C9163A00FEBAE8 /* LightBulbRoomCollectionViewController.m in Sources */,
+				52A72FA51B06B50D007A1C4A /* RSSITranslator.m in Sources */,
+				5256A43B19C2B712001B5664 /* HomeViewController.m in Sources */,
+				527BBADF1A2BDC130097ECC6 /* RoomLogoButton.m in Sources */,
+				52F4037A19A85F2600879F26 /* RoomCell.m in Sources */,
+				521A24CA1AFFF99700AA3E6F /* ProximityViewController.m in Sources */,
+				5256A43819C2B6DA001B5664 /* NewRoomViewController.m in Sources */,
+				52D0465719662EA6004F429A /* DeviceCell.m in Sources */,
+				52D0465A19663254004F429A /* Device.m in Sources */,
+				52733B721A73265A006EA793 /* BackgroundGifViewController.m in Sources */,
+				525864701AC8984300596EC5 /* NewRoomChildViewController.m in Sources */,
+				52A04DEF19B1730D008EF273 /* LightBulbTimerViewController.m in Sources */,
+				52DC62B7198F9B9500E8FE18 /* LightBulbColorViewController.m in Sources */,
+				5201847D199E1444009573B3 /* BrightnessView.m in Sources */,
+				5200820B19639C8D00B2F433 /* main.m in Sources */,
+				52DC62BA198F9BA400E8FE18 /* LightBulbRoomViewController.m in Sources */,
+				52F4037719A85F0A00879F26 /* RoomsCollectionViewController.m in Sources */,
+				527870CF19C95C6100FEBAE8 /* RoomPictureCell.m in Sources */,
+				526DC4931A462EA80054B463 /* NewActionViewController.m in Sources */,
+				52A279C019AA76D200F0C597 /* StatusLabel.m in Sources */,
+				52B99D7C1ADF9D03004C6772 /* BlackCircle.m in Sources */,
+				52A6DFBF1A49F13800541587 /* AYVibrantButton.m in Sources */,
+				5247D68F1A1705EE00EE800B /* CNBluetoothCentral.m in Sources */,
+				52B13CA719824287006EC977 /* CircleCounter.m in Sources */,
+				526DC48D1A462DD70054B463 /* ChildViewController.m in Sources */,
+				52FB1BEB1A43FCC300AAB83E /* ClockCell.m in Sources */,
+				52E7ADF01964DA6100D8D9BE /* MyNavigationController.m in Sources */,
+				52F4037D19A8869D00879F26 /* HeaderCellView.m in Sources */,
+				5247D6891A16FE4C00EE800B /* nextDuinoViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5200821719639C8D00B2F433 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5200822219639C8D00B2F433 /* BluetoothTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5200821D19639C8D00B2F433 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5200820419639C8D00B2F433 /* nextHome */;
+			targetProxy = 5200821C19639C8D00B2F433 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5200821219639C8D00B2F433 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5200821319639C8D00B2F433 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5200822319639C8D00B2F433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5200822419639C8D00B2F433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5200822619639C8D00B2F433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F625610C2C93277F685A84D9 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = nextHome.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Bluetooth/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = nextHome;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5200822719639C8D00B2F433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F53850D7D816137420CDB0EC /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = nextHome.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Bluetooth/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = nextHome;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		5200822919639C8D00B2F433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Bluetooth.app/Bluetooth";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BluetoothTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = nextHomeTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		5200822A19639C8D00B2F433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Bluetooth.app/Bluetooth";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BluetoothTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = nextHomeTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5200820019639C8D00B2F433 /* Build configuration list for PBXProject "nextHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5200822319639C8D00B2F433 /* Debug */,
+				5200822419639C8D00B2F433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5200822519639C8D00B2F433 /* Build configuration list for PBXNativeTarget "nextHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5200822619639C8D00B2F433 /* Debug */,
+				5200822719639C8D00B2F433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5200822819639C8D00B2F433 /* Build configuration list for PBXNativeTarget "nextHomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5200822919639C8D00B2F433 /* Debug */,
+				5200822A19639C8D00B2F433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 520081FD19639C8D00B2F433 /* Project object */;
+}
