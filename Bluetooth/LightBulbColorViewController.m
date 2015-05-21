@@ -175,28 +175,7 @@
 {
     for (Device *device in self.devices)
     {
-        for (CBService *service in device.peripheral.services)
-        {
-            for (CBCharacteristic *characteristic in service.characteristics) {
-                if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"FFF1"]]) {
-                    device.congigureCharacteristic = characteristic;
-                }
-                if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"FFF2"]]) {
-                    device.onOffCharacteristic = characteristic;
-                }
-                if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"FFE4"]]) {
-                    device.readCharacteristic = characteristic;
-                }
-                if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"FFE9"]]) {
-                    device.writeCharacteristic = characteristic;
-                }
-            }
-        }
-        
-        /* set the configuration characteristics to be configurable */
-        [device.peripheral writeValue:device.configurationEnabledData forCharacteristic:device.congigureCharacteristic type:CBCharacteristicWriteWithResponse];
-        /* then turn it on */
-        [device.peripheral writeValue:device.onData forCharacteristic:device.onOffCharacteristic type:CBCharacteristicWriteWithResponse];
+        [device startconfiguration];
     }
 }
 
@@ -213,8 +192,7 @@
     self.blue = (int)(blue * 255);
     
     for (Device *device in self.devices) {
-        [device changeColorWithRed:self.red andGreen:self.green andBlue:self.blue];
-        [device.peripheral writeValue:device.colorData forCharacteristic:device.writeCharacteristic type:CBCharacteristicWriteWithResponse];
+        [device sendColorR:self.red G:self.green B:self.blue];
     }
 }
 
@@ -250,7 +228,7 @@
     for (Device *device in self.devices) {
         self.brightSlider.value = 0;
         [device changeBrightness:15 WithRed:0 andGreen:0 andBlue:0 brightness:YES];
-        [device.peripheral writeValue:device.colorData forCharacteristic:device.writeCharacteristic type:CBCharacteristicWriteWithResponse];
+        [device.peripheral writeValue:device.ZhengGeeColorData forCharacteristic:device.writeCharacteristic type:CBCharacteristicWriteWithResponse];
     }
 }
 
@@ -264,7 +242,7 @@
     for (Device *device in self.devices) {
         self.brightSlider.value = 100;
         [device changeBrightness:255 WithRed:0 andGreen:0 andBlue:0 brightness:YES];
-        [device.peripheral writeValue:device.colorData forCharacteristic:device.writeCharacteristic type:CBCharacteristicWriteWithResponse];
+        [device.peripheral writeValue:device.ZhengGeeColorData forCharacteristic:device.writeCharacteristic type:CBCharacteristicWriteWithResponse];
     }
 }
 
@@ -276,12 +254,12 @@
         
         if (self.red||self.blue||self.green) {
             [device changeBrightness:15+(int)(240*value) WithRed:self.red andGreen:self.green andBlue:self.blue brightness:NO];
-            [device.peripheral writeValue:device.colorData forCharacteristic:device.writeCharacteristic type:CBCharacteristicWriteWithResponse];
+            [device.peripheral writeValue:device.ZhengGeeColorData forCharacteristic:device.writeCharacteristic type:CBCharacteristicWriteWithResponse];
         }
         
         else {
             [device changeBrightness:15+(int)(240*value) WithRed:self.red andGreen:self.green andBlue:self.blue brightness:YES];
-            [device.peripheral writeValue:device.colorData forCharacteristic:device.writeCharacteristic type:CBCharacteristicWriteWithResponse];
+            [device.peripheral writeValue:device.ZhengGeeColorData forCharacteristic:device.writeCharacteristic type:CBCharacteristicWriteWithResponse];
         }
     }
     

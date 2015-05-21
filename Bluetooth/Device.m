@@ -19,7 +19,7 @@
 @synthesize onData;
 @synthesize offData;
 
-
+#pragma mark - Initialization
 - (instancetype)init
 {
     self = [super init];
@@ -51,11 +51,80 @@
         colorByte[5] = 0x0F; //to indicate brightness
         colorByte[6] = 0xAA;
         self.brightness = colorByte[4];
-        self.colorData = [NSData dataWithBytes:&colorByte length:sizeof(colorByte)];
+        self.ZhengGeeColorData = [NSData dataWithBytes:&colorByte length:sizeof(colorByte)];
     }
-    self.isSelected = false;
-
     return self;
+}
+
+
+
+#pragma mark - Configuration
+-(void)startconfiguration
+{
+    // Configuration for 征极
+    if ([self.name hasPrefix:@"LEDnet"]) {
+        for (CBService *service in self.peripheral.services) {
+            for (CBCharacteristic *characteristic in service.characteristics) {
+
+                if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"FFF1"]]) {
+                    self.congigureCharacteristic = characteristic;
+                }
+                if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"FFF2"]]) {
+                    self.onOffCharacteristic = characteristic;
+                }
+                if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"FFE4"]]) {
+                    self.readCharacteristic = characteristic;
+                }
+                if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"FFE9"]]) {
+                    self.writeCharacteristic = characteristic;
+                }
+            }
+        }
+        /* set the configuration characteristics to be configurable */
+        [self.peripheral writeValue:self.configurationEnabledData forCharacteristic:self.congigureCharacteristic type:CBCharacteristicWriteWithResponse];
+        /* then turn it on */
+        [self.peripheral writeValue:self.onData forCharacteristic:self.onOffCharacteristic type:CBCharacteristicWriteWithResponse];
+    }
+    
+    else if ([self.name hasPrefix:@"Tint"]){
+        NSLog(@"N/A for %@",self.name);
+    }
+}
+
+#pragma mark - General Methods
+-(void)sendColorR:(double)red G:(double)green B:(double)blue
+{
+    NSLog(@"%@",self.name);
+    //征极
+    if ([self.name hasPrefix:@"LEDnet"]) {
+        [self changeZhengGeeColorWithRed:red andGreen:green andBlue:blue];
+        [self.peripheral writeValue:self.ZhengGeeColorData forCharacteristic:self.writeCharacteristic type:CBCharacteristicWriteWithResponse];
+    }
+    
+    else if ([self.name hasPrefix:@"Tint"]) {
+        NSLog(@"N/A for %@",self.name);
+    }
+}
+
+#pragma mark - 征极
+
+//Change RGB color
+- (void) changeZhengGeeColorWithRed:(double)red andGreen:(double)green andBlue:(double)blue
+{
+    UInt8 colorByte[7];
+    colorByte[0] = 0x56;
+    colorByte[1] = red; //R
+    colorByte[2] = green; //G
+    colorByte[3] = blue; //B
+    colorByte[4] = (int)self.brightness;
+    colorByte[5] = 0xF0; //to indicate Color Change
+    colorByte[6] = 0xAA;
+    
+    NSLog(@"colorbyte = %d",colorByte[1]);
+    NSLog(@"colorbyte = %d",colorByte[2]);
+    NSLog(@"colorbyte = %d",colorByte[3]);
+    
+    self.ZhengGeeColorData = [NSData dataWithBytes:&colorByte length:sizeof(colorByte)];
 }
 
 
@@ -74,7 +143,7 @@
     colorByte[6] = 0xAA;
     
     NSLog(@"colorbyte = %d",colorByte[4]);
-    self.colorData = [NSData dataWithBytes:&colorByte length:sizeof(colorByte)];
+    self.ZhengGeeColorData = [NSData dataWithBytes:&colorByte length:sizeof(colorByte)];
     return colorByte[4];
 }
 
@@ -93,7 +162,7 @@
     colorByte[6] = 0xAA;
     
     NSLog(@"colorbyte = %d",colorByte[4]);
-    self.colorData = [NSData dataWithBytes:&colorByte length:sizeof(colorByte)];
+    self.ZhengGeeColorData = [NSData dataWithBytes:&colorByte length:sizeof(colorByte)];
     return colorByte[4];
 }
 
@@ -108,26 +177,10 @@
     colorByte[5] = 0x0F; //to indicate Color Change
     colorByte[6] = 0xAA;
     
-    self.colorData = [NSData dataWithBytes:&colorByte length:sizeof(colorByte)];
+    self.ZhengGeeColorData = [NSData dataWithBytes:&colorByte length:sizeof(colorByte)];
 }
 
-- (void) changeColorWithRed:(double)red andGreen:(double)green andBlue:(double)blue
-{
-    UInt8 colorByte[7];
-    colorByte[0] = 0x56;
-    colorByte[1] = red; //R
-    colorByte[2] = green; //G
-    colorByte[3] = blue; //B
-    colorByte[4] = (int)self.brightness;
-    colorByte[5] = 0xF0; //to indicate Color Change
-    colorByte[6] = 0xAA;
-    
-    NSLog(@"colorbyte = %d",colorByte[1]);
-    NSLog(@"colorbyte = %d",colorByte[2]);
-    NSLog(@"colorbyte = %d",colorByte[3]);
 
-    self.colorData = [NSData dataWithBytes:&colorByte length:sizeof(colorByte)];
-}
 
 - (void)changeBrightness:(double)brightness WithRed:(double)red andGreen:(double)green andBlue:(double)blue brightness:(BOOL)bright
 {
@@ -144,8 +197,7 @@
         colorByte[5] = 0xF0; //to indicate Color Change
     }
     colorByte[6] = 0xAA;
-    
-    self.colorData = [NSData dataWithBytes:&colorByte length:sizeof(colorByte)];
+    self.ZhengGeeColorData = [NSData dataWithBytes:&colorByte length:sizeof(colorByte)];
 }
 
 

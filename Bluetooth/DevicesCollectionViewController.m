@@ -61,6 +61,7 @@ static NSString * const reuseIdentifier = @"Cell";
     self.roomName = name;
     [self setUpHome];
     [self setUpDevices];
+    
     self.devices = [NSMutableArray arrayWithArray:devices];
     self.allSelected = false;
     

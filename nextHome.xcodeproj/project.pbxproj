@@ -17,11 +17,6 @@
 		521A24CA1AFFF99700AA3E6F /* ProximityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521A24C91AFFF99700AA3E6F /* ProximityViewController.m */; };
 		521D6AC21A428BF3000E68F0 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521D6AC11A428BF3000E68F0 /* ExternalAccessory.framework */; };
 		5226DBF01B0DB3D900370E3B /* ZhengGeeLightBulb.m in Sources */ = {isa = PBXBuildFile; fileRef = 5226DBEF1B0DB3D900370E3B /* ZhengGeeLightBulb.m */; };
-		5226DC0A1B0DC35200370E3B /* BlueToothPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 5226DC051B0DC35200370E3B /* BlueToothPacket.m */; };
-		5226DC0B1B0DC35200370E3B /* Bulb.m in Sources */ = {isa = PBXBuildFile; fileRef = 5226DC071B0DC35200370E3B /* Bulb.m */; };
-		5226DC0C1B0DC35200370E3B /* BulbManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5226DC091B0DC35200370E3B /* BulbManager.m */; };
-		5226DC0F1B0DC36000370E3B /* NSObject+Marlight.m in Sources */ = {isa = PBXBuildFile; fileRef = 5226DC0E1B0DC36000370E3B /* NSObject+Marlight.m */; };
-		5226DC261B0DC3AC00370E3B /* iBLEKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5226DC111B0DC3AC00370E3B /* iBLEKit.a */; };
 		5247D6891A16FE4C00EE800B /* nextDuinoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5247D6881A16FE4C00EE800B /* nextDuinoViewController.m */; };
 		5247D68F1A1705EE00EE800B /* CNBluetoothCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = 5247D68E1A1705EE00EE800B /* CNBluetoothCentral.m */; };
 		5248BFEF1B0B0C5D00A83DD0 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5248BFEE1B0B0C5D00A83DD0 /* TimerViewController.m */; };
@@ -102,34 +97,6 @@
 		521D6AC31A428BF3000E68F0 /* nextHome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = nextHome.entitlements; sourceTree = "<group>"; };
 		5226DBEE1B0DB3B700370E3B /* ZhengGeeLightBulb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhengGeeLightBulb.h; sourceTree = "<group>"; };
 		5226DBEF1B0DB3D900370E3B /* ZhengGeeLightBulb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhengGeeLightBulb.m; sourceTree = "<group>"; };
-		5226DC041B0DC35200370E3B /* BlueToothPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueToothPacket.h; sourceTree = "<group>"; };
-		5226DC051B0DC35200370E3B /* BlueToothPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueToothPacket.m; sourceTree = "<group>"; };
-		5226DC061B0DC35200370E3B /* Bulb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bulb.h; sourceTree = "<group>"; };
-		5226DC071B0DC35200370E3B /* Bulb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bulb.m; sourceTree = "<group>"; };
-		5226DC081B0DC35200370E3B /* BulbManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulbManager.h; sourceTree = "<group>"; };
-		5226DC091B0DC35200370E3B /* BulbManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulbManager.m; sourceTree = "<group>"; };
-		5226DC0D1B0DC36000370E3B /* NSObject+Marlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Marlight.h"; sourceTree = "<group>"; };
-		5226DC0E1B0DC36000370E3B /* NSObject+Marlight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Marlight.m"; sourceTree = "<group>"; };
-		5226DC111B0DC3AC00370E3B /* iBLEKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = iBLEKit.a; sourceTree = "<group>"; };
-		5226DC141B0DC3AC00370E3B /* CBUUID+KIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBUUID+KIAdditions.h"; sourceTree = "<group>"; };
-		5226DC151B0DC3AC00370E3B /* iBLEKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iBLEKit.h; sourceTree = "<group>"; };
-		5226DC161B0DC3AC00370E3B /* KIBlueCentralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIBlueCentralManager.h; sourceTree = "<group>"; };
-		5226DC171B0DC3AC00370E3B /* KIBluePeripheralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIBluePeripheralManager.h; sourceTree = "<group>"; };
-		5226DC181B0DC3AC00370E3B /* KIDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIDefines.h; sourceTree = "<group>"; };
-		5226DC191B0DC3AC00370E3B /* KIHSVColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIHSVColorPickerView.h; sourceTree = "<group>"; };
-		5226DC1A1B0DC3AC00370E3B /* KIModalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIModalView.h; sourceTree = "<group>"; };
-		5226DC1B1B0DC3AC00370E3B /* KIPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIPeripheral.h; sourceTree = "<group>"; };
-		5226DC1C1B0DC3AC00370E3B /* KIProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIProgressView.h; sourceTree = "<group>"; };
-		5226DC1D1B0DC3AC00370E3B /* KITipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KITipsView.h; sourceTree = "<group>"; };
-		5226DC1E1B0DC3AC00370E3B /* NSBundle+KIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+KIAdditions.h"; sourceTree = "<group>"; };
-		5226DC1F1B0DC3AC00370E3B /* NSData+KIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+KIAdditions.h"; sourceTree = "<group>"; };
-		5226DC201B0DC3AC00370E3B /* NSObject+KIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KIAdditions.h"; sourceTree = "<group>"; };
-		5226DC211B0DC3AC00370E3B /* NSString+KIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KIAdditions.h"; sourceTree = "<group>"; };
-		5226DC221B0DC3AC00370E3B /* NSUserDefaults+KIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+KIAdditions.h"; sourceTree = "<group>"; };
-		5226DC231B0DC3AC00370E3B /* UIColor+KIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KIAdditions.h"; sourceTree = "<group>"; };
-		5226DC241B0DC3AC00370E3B /* UIImage+KIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KIAdditions.h"; sourceTree = "<group>"; };
-		5226DC251B0DC3AC00370E3B /* UIView+KIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KIAdditions.h"; sourceTree = "<group>"; };
-		5226DC271B0DC62C00370E3B /* Marlight-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Marlight-Prefix.pch"; path = "../../../controller/Marlight-Prefix.pch"; sourceTree = "<group>"; };
 		5247D6871A16FE4C00EE800B /* nextDuinoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nextDuinoViewController.h; sourceTree = "<group>"; };
 		5247D6881A16FE4C00EE800B /* nextDuinoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nextDuinoViewController.m; sourceTree = "<group>"; };
 		5247D68D1A1705EE00EE800B /* CNBluetoothCentral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNBluetoothCentral.h; sourceTree = "<group>"; };
@@ -209,7 +176,6 @@
 				5200822C1963A47900B2F433 /* CoreBluetooth.framework in Frameworks */,
 				521D6AC21A428BF3000E68F0 /* ExternalAccessory.framework in Frameworks */,
 				D81A252D3CC248A7B40F7644 /* libPods.a in Frameworks */,
-				5226DC261B0DC3AC00370E3B /* iBLEKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,66 +260,6 @@
 				5200822019639C8D00B2F433 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5226DC001B0DC33600370E3B /* Lede */ = {
-			isa = PBXGroup;
-			children = (
-				5226DC101B0DC3AC00370E3B /* iBLEKit */,
-				5226DC0D1B0DC36000370E3B /* NSObject+Marlight.h */,
-				5226DC0E1B0DC36000370E3B /* NSObject+Marlight.m */,
-				5226DC041B0DC35200370E3B /* BlueToothPacket.h */,
-				5226DC051B0DC35200370E3B /* BlueToothPacket.m */,
-				5226DC061B0DC35200370E3B /* Bulb.h */,
-				5226DC071B0DC35200370E3B /* Bulb.m */,
-				5226DC081B0DC35200370E3B /* BulbManager.h */,
-				5226DC091B0DC35200370E3B /* BulbManager.m */,
-			);
-			name = Lede;
-			sourceTree = "<group>";
-		};
-		5226DC101B0DC3AC00370E3B /* iBLEKit */ = {
-			isa = PBXGroup;
-			children = (
-				5226DC111B0DC3AC00370E3B /* iBLEKit.a */,
-				5226DC121B0DC3AC00370E3B /* include */,
-			);
-			name = iBLEKit;
-			path = "../../LEDE API/iBLEKit";
-			sourceTree = "<group>";
-		};
-		5226DC121B0DC3AC00370E3B /* include */ = {
-			isa = PBXGroup;
-			children = (
-				5226DC131B0DC3AC00370E3B /* iBLEKit */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		5226DC131B0DC3AC00370E3B /* iBLEKit */ = {
-			isa = PBXGroup;
-			children = (
-				5226DC141B0DC3AC00370E3B /* CBUUID+KIAdditions.h */,
-				5226DC151B0DC3AC00370E3B /* iBLEKit.h */,
-				5226DC161B0DC3AC00370E3B /* KIBlueCentralManager.h */,
-				5226DC171B0DC3AC00370E3B /* KIBluePeripheralManager.h */,
-				5226DC181B0DC3AC00370E3B /* KIDefines.h */,
-				5226DC191B0DC3AC00370E3B /* KIHSVColorPickerView.h */,
-				5226DC1A1B0DC3AC00370E3B /* KIModalView.h */,
-				5226DC1B1B0DC3AC00370E3B /* KIPeripheral.h */,
-				5226DC1C1B0DC3AC00370E3B /* KIProgressView.h */,
-				5226DC1D1B0DC3AC00370E3B /* KITipsView.h */,
-				5226DC1E1B0DC3AC00370E3B /* NSBundle+KIAdditions.h */,
-				5226DC1F1B0DC3AC00370E3B /* NSData+KIAdditions.h */,
-				5226DC201B0DC3AC00370E3B /* NSObject+KIAdditions.h */,
-				5226DC211B0DC3AC00370E3B /* NSString+KIAdditions.h */,
-				5226DC221B0DC3AC00370E3B /* NSUserDefaults+KIAdditions.h */,
-				5226DC231B0DC3AC00370E3B /* UIColor+KIAdditions.h */,
-				5226DC241B0DC3AC00370E3B /* UIImage+KIAdditions.h */,
-				5226DC251B0DC3AC00370E3B /* UIView+KIAdditions.h */,
-				5226DC271B0DC62C00370E3B /* Marlight-Prefix.pch */,
-			);
-			path = iBLEKit;
 			sourceTree = "<group>";
 		};
 		5247D68A1A16FE5800EE800B /* nextDuino */ = {
@@ -473,7 +379,6 @@
 				52D0465919663254004F429A /* Device.m */,
 				5226DBEE1B0DB3B700370E3B /* ZhengGeeLightBulb.h */,
 				5226DBEF1B0DB3D900370E3B /* ZhengGeeLightBulb.m */,
-				5226DC001B0DC33600370E3B /* Lede */,
 				52A72FA41B06B50D007A1C4A /* RSSITranslator.m */,
 			);
 			name = Model;
@@ -653,7 +558,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				52FB1BE81A43EFC000AAB83E /* TimedActionCollectionViewController.m in Sources */,
-				5226DC0F1B0DC36000370E3B /* NSObject+Marlight.m in Sources */,
 				52733B751A736DD3006EA793 /* IntroductionChildViewController.m in Sources */,
 				5248BFEF1B0B0C5D00A83DD0 /* TimerViewController.m in Sources */,
 				52D0465419662D68004F429A /* DevicesCollectionViewController.m in Sources */,
@@ -663,10 +567,8 @@
 				52A72FA51B06B50D007A1C4A /* RSSITranslator.m in Sources */,
 				5256A43B19C2B712001B5664 /* HomeViewController.m in Sources */,
 				527BBADF1A2BDC130097ECC6 /* RoomLogoButton.m in Sources */,
-				5226DC0B1B0DC35200370E3B /* Bulb.m in Sources */,
 				52F4037A19A85F2600879F26 /* RoomCell.m in Sources */,
 				521A24CA1AFFF99700AA3E6F /* ProximityViewController.m in Sources */,
-				5226DC0A1B0DC35200370E3B /* BlueToothPacket.m in Sources */,
 				5256A43819C2B6DA001B5664 /* NewRoomViewController.m in Sources */,
 				52D0465719662EA6004F429A /* DeviceCell.m in Sources */,
 				52D0465A19663254004F429A /* Device.m in Sources */,
@@ -680,7 +582,6 @@
 				52DC62BA198F9BA400E8FE18 /* LightBulbRoomViewController.m in Sources */,
 				52F4037719A85F0A00879F26 /* RoomsCollectionViewController.m in Sources */,
 				527870CF19C95C6100FEBAE8 /* RoomPictureCell.m in Sources */,
-				5226DC0C1B0DC35200370E3B /* BulbManager.m in Sources */,
 				526DC4931A462EA80054B463 /* NewActionViewController.m in Sources */,
 				52A279C019AA76D200F0C597 /* StatusLabel.m in Sources */,
 				52B99D7C1ADF9D03004C6772 /* BlackCircle.m in Sources */,

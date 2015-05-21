@@ -283,7 +283,7 @@ static NSString * const reuseIdentifier = @"Room";
     UITabBarController *tabBarController = [[UITabBarController alloc]init];
     tabBarController.tabBar.backgroundColor = [UIColor clearColor];
     [tabBarController.tabBar setTintColor:[UIColor lightGrayColor]];
-
+    
     LightBulbColorViewController *ColorVC = [[LightBulbColorViewController alloc]initWithDevices:self.selectedDevices];
     ColorVC.extendedLayoutIncludesOpaqueBars = YES;
     TimedActionCollectionViewController *TimerVC = [[TimedActionCollectionViewController alloc]initWithDevices:self.selectedDevices];
@@ -354,38 +354,38 @@ static NSString * const reuseIdentifier = @"Room";
     }
     
     else if (indexPath.section == 1) {
-        CBPeripheral *device = [self.peripherals objectAtIndex:indexPath.row];
+        CBPeripheral *peripheral = [self.peripherals objectAtIndex:indexPath.row];
         /* Set logo Image */
-        if ([device.name hasPrefix:@"LEDnet"]) {
+        if ([peripheral.name hasPrefix:@"LEDnet"]) {
             cell.name.text = @"nextBulb-nano";
             [cell setLogoImage:@"nextBulb-nano"];
         }
-        else if ([device.name hasPrefix:@"Tint B7"]) {
+        else if ([peripheral.name hasPrefix:@"Tint B7"]) {
             cell.name.text = @"nextBulb";
             [cell setLogoImage:@"nextBulb"];
         }
-        else if ([device.name hasPrefix:@"Tint B9"]) {
+        else if ([peripheral.name hasPrefix:@"Tint B9"]) {
             cell.name.text = @"nextBulb";
             [cell setLogoImage:@"nextBulb"];
         }
-        else if ([device.name hasPrefix:@"Coin"]){
+        else if ([peripheral.name hasPrefix:@"Coin"]){
             cell.name.text = @"nextDuino";
             [cell setLogoImage:@"nextDuino"];
         }
         
-        else if ([device.name hasPrefix:@"mac"]) {
+        else if ([peripheral.name hasPrefix:@"mac"]) {
             
         }
         
         /* Set State Image */
-        if (device.state == CBPeripheralStateConnected) {
+        if (peripheral.state == CBPeripheralStateConnected) {
             [cell setStateImage:@"Connected"];
         }
-        else if (device.state == CBPeripheralStateConnecting)
+        else if (peripheral.state == CBPeripheralStateConnecting)
         {
             [cell setStateImage:@"Connecting"];
         }
-        else if (device.state == CBPeripheralStateDisconnected)
+        else if (peripheral.state == CBPeripheralStateDisconnected)
         {
             [cell setStateImage:@"Disconnected"];
         }
@@ -423,7 +423,7 @@ static NSString * const reuseIdentifier = @"Room";
         CBPeripheral *peripheral = [self.peripherals objectAtIndex:indexPath.row];
         Device *device = [[Device alloc]init];
         device.peripheral = peripheral;
-        
+        device.name = peripheral.name;
         [self.selectedDevices addObject:device];
         
         if ([peripheral.name hasPrefix:@"LEDnet"] || [peripheral.name hasPrefix:@"Tint"])
@@ -495,7 +495,7 @@ static NSString * const reuseIdentifier = @"Room";
 //        NSArray *devices = [defaults objectForKey:room];
 //        if (devices) {
 //            for (NSString *device in devices) {
-//                if ([device isEqualToString:peripheral.identifier.UUIDString]) {
+//                if ([device isEqualToStr3ing:peripheral.identifier.UUIDString]) {
 //                    existing = true;
 //                    NSLog(@"got here");
 //                }
@@ -507,6 +507,7 @@ static NSString * const reuseIdentifier = @"Room";
         if ([peripheral.name hasPrefix:@"LEDnet"] || [peripheral.name hasPrefix:@"Tint"] || [peripheral.name hasPrefix:@"Coin"]) {
             Device *device = [[Device alloc]init];
             device.peripheral = peripheral;
+            device.name = peripheral.name;
             [self.Devices addObject:device];
             [self.peripherals addObject:peripheral];
             [central connectPeripheral:peripheral options:nil];
