@@ -365,12 +365,16 @@ static NSString * const reuseIdentifier = @"Room";
             [cell setLogoImage:@"nextBulb"];
         }
         else if ([device.name hasPrefix:@"Tint B9"]) {
-            cell.name.text = @"nextBulb-mega";
-            [cell setLogoImage:@"nextBulb-mega"];
+            cell.name.text = @"nextBulb";
+            [cell setLogoImage:@"nextBulb"];
         }
         else if ([device.name hasPrefix:@"Coin"]){
             cell.name.text = @"nextDuino";
             [cell setLogoImage:@"nextDuino"];
+        }
+        
+        else if ([device.name hasPrefix:@"mac"]) {
+            
         }
         
         /* Set State Image */

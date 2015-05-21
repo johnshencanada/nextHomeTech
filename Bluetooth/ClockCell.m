@@ -70,6 +70,7 @@
         self.proximityLabel.textAlignment = NSTextAlignmentCenter;
         self.proximityLabel.font = [UIFont fontWithName:@"GillSans-Light" size:10.0];        
         
+        
         //Action
         self.actionLabel = [[UILabel alloc]initWithFrame:CGRectMake(0,
                                                                     self.screenRect.size.height/4,

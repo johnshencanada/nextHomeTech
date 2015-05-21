@@ -19,6 +19,7 @@
 @property (nonatomic) UIButton *back;
 @property (strong,nonatomic) VBFPopFlatButton *flatRoundedButton;
 @property (strong,nonatomic) NSMutableArray *actions;
+@property bool state;
 @end
 
 @implementation TimedActionCollectionViewController
@@ -75,18 +76,23 @@ static NSString * const reuseIdentifier = @"Clock";
     NSString * key2 = @"OnOff";         // on or off
     NSString * key3 = @"time";          // the time of the action
     NSString * key4 = @"proximity";     // 0 as strong, 1 as okay, 2 as weak
+    NSString * key5 = @"enable";        // 0 as disable, 1 as enable
+
     
     NSNumber *obj1 = [NSNumber numberWithLong:1];
     NSNumber *obj2 = [NSNumber numberWithBool:1];
     NSDate *obj3 = [NSDate date];
     NSNumber *obj4 = [NSNumber numberWithInt:0];
-    NSDictionary * dictionary = [NSDictionary dictionaryWithObjects:@[obj1,obj2,obj3,obj4] forKeys:@[key1,key2,key3,key4]];
+    NSNumber *obj5 = [NSNumber numberWithBool:0];
+
+    NSDictionary * dictionary = [NSDictionary dictionaryWithObjects:@[obj1,obj2,obj3,obj4,obj5] forKeys:@[key1,key2,key3,key4,key5]];
     
     obj1 = [NSNumber numberWithLong:2];
     obj2 = [NSNumber numberWithBool:0];
     obj3 = [NSDate date];
     obj4 = [NSNumber numberWithInt:90];
-    NSDictionary * dictionary2 =[NSDictionary dictionaryWithObjects:@[obj1,obj2,obj3,obj4] forKeys:@[key1,key2,key3,key4]];
+    obj5 = [NSNumber numberWithBool:0];
+    NSDictionary * dictionary2 =[NSDictionary dictionaryWithObjects:@[obj1,obj2,obj3,obj4,obj5] forKeys:@[key1,key2,key3,key4,key5]];
     
     [self.actions addObject:dictionary];
     [self.actions addObject:dictionary2];
@@ -180,15 +186,15 @@ static NSString * const reuseIdentifier = @"Clock";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
     ClockCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    UILongPressGestureRecognizer* gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(startDeleteMode:)];
-    gestureRecognizer.minimumPressDuration = 1.5;
-    [cell addGestureRecognizer:gestureRecognizer];
+//    UILongPressGestureRecognizer* gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(startDeleteMode:)];
+//    gestureRecognizer.minimumPressDuration = 1.5;
+//    [cell addGestureRecognizer:gestureRecognizer];
     
     if (self.actions) {
         NSDictionary *dictionary = [self.actions objectAtIndex:indexPath.row];
         NSNumber *actionType = [dictionary objectForKey:@"actionType"];
         NSNumber *onOff = [dictionary objectForKey:@"OnOff"];
-//        NSNumber *enable = [dictionary objectForKey:@"enbale"];
+        NSNumber *enable = [dictionary objectForKey:@"enbale"];
         
         //Alarm
         if ([actionType intValue] == 0) {
@@ -241,10 +247,37 @@ static NSString * const reuseIdentifier = @"Clock";
         else {
             cell.actionLabel.text = @"Turn Off";
         }
+        
+        if ([enable intValue] == 0) {
+            cell.enableSwitch.on = false;
+            self.state = false;
+        }
+        
+        else {
+            cell.enableSwitch.on = true;
+            self.state = true;
+        }
+        
+        [cell.enableSwitch addTarget:self action:@selector(setState:) forControlEvents:UIControlEventValueChanged];
     }
     
     // Configure the cell
     return cell;
+}
+
+-(void)setState
+{
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    NSArray *actionArray = [NSMutableArray arrayWithArray:[defaults objectForKey:@"actions"]];
+//    NSDictionary *dictionary = actionArray[0];
+//    NSString * key5 = @"enable";        // 0 as disable, 1 as enable
+//    NSNumber *obj5 = [NSNumber numberWithBool:self.state];
+//    
+//    [dictionary setValue:obj5 forKey:key5];
+//    [actionArray setValue:dictionary forKey:0];
+//    [defaults setObject:actionArray forKey:@"actions"];
+    
+    NSLog(@"Hi");
 }
 
 #pragma mark <UICollectionViewDelegate>

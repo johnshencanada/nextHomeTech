@@ -209,6 +209,20 @@
     NSNumber *number = [self.dictionary objectForKey:@"proximity"];
     int index = [number intValue];
     self.colorSegmentedControl.selectedSegmentIndex = index;
+    
+    if (index == 0)
+    {
+        self.colorSegmentedControl.segmentIndicatorBackgroundColor = [UIColor colorWithRed:0.298 green:0.851 blue:0.392 alpha:0.8];
+    }
+    
+    else if (index == 1)
+    {
+        self.colorSegmentedControl.segmentIndicatorBackgroundColor = [UIColor colorWithRed:1 green:0.859 blue:0.298 alpha:0.8];
+    }
+    
+    else {
+        self.colorSegmentedControl.segmentIndicatorBackgroundColor = [UIColor colorWithRed:1 green:0.231 blue:0.298 alpha:0.8];
+    }
 }
 
 - (void)pushUpGoButton

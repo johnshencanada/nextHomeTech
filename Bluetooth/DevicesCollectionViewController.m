@@ -131,10 +131,10 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.view addSubview:self.dashBoard];
     
     self.goButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 600, 320, 80)];
-    [self.goButton setTitle:@"Go!" forState:UIControlStateNormal];
+    [self.goButton setTitle:@"Lightbulbs" forState:UIControlStateNormal];
     [self.goButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     self.goButton.titleLabel.textAlignment = NSTextAlignmentCenter;
-    self.goButton.titleLabel.font = [UIFont fontWithName:@"GillSans-Light" size:50.0];
+    self.goButton.titleLabel.font = [UIFont fontWithName:@"GillSans-Light" size:30.0];
     self.goButton.titleLabel.textColor = [UIColor blackColor];
     self.goButton.backgroundColor = [UIColor colorWithWhite:255 alpha:0.2];
     [self.goButton addTarget:self action:@selector(pushToViewControllers) forControlEvents:UIControlEventTouchUpInside];
