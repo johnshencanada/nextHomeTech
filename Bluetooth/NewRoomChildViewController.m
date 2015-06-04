@@ -28,15 +28,9 @@
                                                           0,
                                                           self.screenRect.size.width,
                                                           self.screenRect.size.height/4)];
-    top.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
-    [self.view addSubview:top];
+    top.backgroundColor = [UIColor colorWithRed:0.204 green:0.667 blue:0.863 alpha:0.95];
 
-    UIView *bottom = [[UIView alloc]initWithFrame:CGRectMake(0,
-                                                             (5 * self.screenRect.size.height/8),
-                                                             self.screenRect.size.width,
-                                                             (15 * self.screenRect.size.height/16))];
-    bottom.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.3];
-    [self.view addSubview:bottom];
+    [self.view addSubview:top];
     
     // room
     self.roomIcon = [[UIImageView alloc]initWithFrame:CGRectMake(self.screenRect.size.width/2 - (self.screenRect.size.width/12),

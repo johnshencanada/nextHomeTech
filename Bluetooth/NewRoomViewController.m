@@ -18,7 +18,8 @@
 @property (strong, nonatomic) UIButton *flashButton;
 @property (strong,nonatomic) UIButton *retakeButton;
 @property (strong,nonatomic) UIButton *goButton;
-
+//@property (strong,nonatomic) UIView *top;
+//@property (strong,nonatomic) UIView *bottom;
 @end
 
 @implementation NewRoomViewController
@@ -108,7 +109,7 @@
     // button to toggle flash
     self.flashButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.flashButton.frame = CGRectMake(0,
-                                        self.screenRect.size.height/4,
+                                        self.screenRect.size.height - (self.screenRect.size.width/3),
                                         (self.screenRect.size.width/5),
                                         (self.screenRect.size.width/5));
     [self.flashButton setImage:[UIImage imageNamed:@"camera-flash-off.png"] forState:UIControlStateNormal];
@@ -120,7 +121,7 @@
     // button to toggle camera positions
     self.switchButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.switchButton.frame = CGRectMake(self.screenRect.size.width - (self.screenRect.size.width/5),
-                                         self.screenRect.size.height/4,
+                                         self.screenRect.size.height - (self.screenRect.size.width/3),
                                          (self.screenRect.size.width/5),
                                          (self.screenRect.size.width/5));
     [self.switchButton setImage:[UIImage imageNamed:@"camera-switch.png"] forState:UIControlStateNormal];
@@ -130,23 +131,38 @@
     
     [self setUpGoButton];
     
-    // page view
-    UIPageControl *pageControl = [UIPageControl appearance];
-    pageControl.pageIndicatorTintColor = [UIColor clearColor];
-    pageControl.currentPageIndicatorTintColor = [UIColor clearColor];
-    self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    self.pageViewController.dataSource = self;
-    [[self.pageViewController view]setFrame:CGRectMake(0,
-                                                       0,
-                                                       self.screenRect.size.width,
-                                                       (5 * self.screenRect.size.height/16))];
     
-    NewRoomChildViewController *initialViewController = [self viewControllerAtIndex:0];
-    NSArray *viewControllers = [NSArray arrayWithObject:initialViewController];
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    // UIView
+//    self.top = [[UIView alloc]initWithFrame:CGRectMake(0,
+//                                                          0,
+//                                                          self.screenRect.size.width,
+//                                                          (4 * self.screenRect.size.height/16))];
+//    self.top.backgroundColor = [UIColor colorWithRed:0.204 green:0.667 blue:0.863 alpha:0.95];
+//    [self.view addSubview:self.top];
+
+    // Page View
+//    UIPageControl *pageControl = [UIPageControl appearance];
+//    pageControl.pageIndicatorTintColor = [UIColor clearColor];
+//    pageControl.currentPageIndicatorTintColor = [UIColor clearColor];
+//    self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+//    self.pageViewController.dataSource = self;
+//    [[self.pageViewController view]setFrame:CGRectMake(0,
+//                                                       (9 * self.screenRect.size.height/16),
+//                                                       self.screenRect.size.width,
+//                                                       (4 * self.screenRect.size.height/16))];
+//    
+//    NewRoomChildViewController *initialViewController = [self viewControllerAtIndex:0];
+//    NSArray *viewControllers = [NSArray arrayWithObject:initialViewController];
+//    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+//    [self addChildViewController:_pageViewController];
+//    [self.pageViewController didMoveToParentViewController:self];
     
-    [self addChildViewController:_pageViewController];
-    [self.pageViewController didMoveToParentViewController:self];
+    // UIView
+//    self.bottom = [[UIView alloc]initWithFrame:CGRectMake(0,
+//                                                          (11.97 * self.screenRect.size.height/16),
+//                                                          self.screenRect.size.width,
+//                                                          (2 * self.screenRect.size.height/16))];
+//    self.bottom.backgroundColor = [UIColor colorWithRed:0.204 green:0.667 blue:0.863 alpha:0.8];
 }
 
 
@@ -180,14 +196,13 @@
 }
 
 
-
 - (void)viewWillLayoutSubviews {
     
     [super viewWillLayoutSubviews];
     self.camera.view.frame = CGRectMake(0,
-                                        0,
+                                        (4 * self.screenRect.size.height/16),
                                         self.screenRect.size.width,
-                                        self.screenRect.size.height);
+                                        (5 * self.screenRect.size.height/16));
     
     //    self.snapButton.center = self.view.contentCenter;
     //    self.snapButton.bottom = self.view.height - 15;
@@ -212,7 +227,8 @@
     [self.retakeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.retakeButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.retakeButton.titleLabel.font = [UIFont fontWithName:@"GillSans-Light" size:40];
-    self.retakeButton.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:59.0f/255.0f blue:30.0f/255.0f alpha:0.4];
+    self.retakeButton.backgroundColor = [UIColor colorWithRed:1 green:0.231 blue:0.298 alpha:0.6];
+
     [self.retakeButton addTarget:self action:@selector(retake) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.retakeButton];
 
@@ -224,18 +240,19 @@
     [self.goButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.goButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.goButton.titleLabel.font = [UIFont fontWithName:@"GillSans-Light" size:40];
-    self.goButton.backgroundColor = [UIColor colorWithRed:90.0f/255.0f green:212.0f/255.0f blue:39.0f/255.0f alpha:0.4];
+    self.goButton.backgroundColor = [UIColor colorWithRed:0.298 green:0.851 blue:0.392 alpha:0.6];
     [self.goButton addTarget:self action:@selector(go) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.goButton];
 }
 
-- (void) retake
+- (void)retake
 {
     [self.camera start];
     [self.view addSubview:self.flashButton ];
     [self.view addSubview:self.switchButton ];
     [self.view addSubview:self.snapButton ];
-    
+//    [self.bottom removeFromSuperview];
+
     //red
     [UIView animateWithDuration:1.0
                           delay:0
@@ -274,6 +291,7 @@
 
 - (void)popupSelection
 {
+//    [self.view addSubview:self.bottom];
     //red
     [UIView animateWithDuration:1.0
                           delay:0

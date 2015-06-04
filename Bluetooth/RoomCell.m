@@ -81,7 +81,7 @@
     
     else if ([logoName isEqualToString:@"nextBulb-nano"])
     {
-        logoImage = [UIImage imageNamed:@"appliance-nextbulb"];
+        logoImage = [UIImage imageNamed:@"appliance-zhengGee"];
     }
     
     else if ([logoName isEqualToString:@"nextBulb"])

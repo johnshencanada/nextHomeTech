@@ -105,8 +105,8 @@
     self.instruction1.textAlignment = NSTextAlignmentCenter;
     self.instruction1.text = @": ";
     self.instruction1.font = [UIFont fontWithName:@"GillSans-Light" size:18];
-    [self.instruction1 setUserInteractionEnabled:NO];
-//    [self.view addSubview:self.instruction1];
+
+    //    [self.view addSubview:self.instruction1];
     
     self.instruction2 = [[UITextView alloc]initWithFrame:CGRectMake(10, 340, 300, 60)];
     self.instruction2.backgroundColor = [UIColor clearColor];
@@ -165,25 +165,6 @@
                                                                                                 44.0f)];
     foursquareSegmentedControlBackgroundView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:foursquareSegmentedControlBackgroundView];
-    
-//
-//    self.foursquareSegmentedControl = [[NYSegmentedControl alloc] initWithItems:@[@"On"]];
-//    self.foursquareSegmentedControl.titleTextColor = [UIColor lightGrayColor];
-//    self.foursquareSegmentedControl.selectedTitleTextColor = [UIColor whiteColor];
-//    self.foursquareSegmentedControl.selectedTitleFont = [UIFont systemFontOfSize:13.0f];
-//    self.foursquareSegmentedControl.segmentIndicatorBackgroundColor = [UIColor colorWithRed:0.38f green:0.68f blue:0.93f alpha:0.6];
-//    self.foursquareSegmentedControl.backgroundColor = [UIColor colorWithRed:0.31f green:0.53f blue:0.72f alpha:0.2f];
-//    self.foursquareSegmentedControl.borderWidth = 0.0f;
-//    self.foursquareSegmentedControl.segmentIndicatorBorderWidth = 0.0f;
-//    self.foursquareSegmentedControl.segmentIndicatorInset = 1.0f;
-//    self.foursquareSegmentedControl.segmentIndicatorBorderColor = self.view.backgroundColor;
-//    [self.foursquareSegmentedControl sizeToFit];
-//    self.foursquareSegmentedControl.cornerRadius = CGRectGetHeight(self.foursquareSegmentedControl.frame) / 2.0f;
-//    self.foursquareSegmentedControl.center = CGPointMake(self.view.center.x,
-//                                                         self.view.center.y + 20);
-//    foursquareSegmentedControlBackgroundView.center = self.foursquareSegmentedControl.center;
-//    [self.foursquareSegmentedControl addTarget:self action:@selector(segmentSelected:) forControlEvents:UIControlEventValueChanged];
-//    [self.view addSubview:self.foursquareSegmentedControl];
     
     self.colorSegmentedControl = [[NYSegmentedControl alloc] initWithItems:@[@"Strong",@"Okay", @"Weak"]];
     self.colorSegmentedControl.titleTextColor = [UIColor lightGrayColor];

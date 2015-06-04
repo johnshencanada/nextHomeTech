@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "StoreCollectionViewController.h"
 
 @interface HomeViewController ()
 @property CGRect screenRect;
@@ -32,6 +33,7 @@
     [super viewDidLoad];
     self.screenRect = [[UIScreen mainScreen] bounds];
     self.view.backgroundColor = [UIColor whiteColor];
+    
     /* blur effect background */
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 320, 600)];
     imageView.image = [UIImage imageNamed:@"house"];
@@ -64,6 +66,7 @@
     self.storeBtn.titleLabel.font = [UIFont fontWithName:@"GillSans-Light" size:20.0];
     [self.storeBtn setTintColor:[UIColor whiteColor]];
     [self.storeBtn setTitle:@"Next Store" forState:UIControlStateNormal];
+    [self.storeBtn addTarget:self action:@selector(goToStore) forControlEvents:UIControlEventAllTouchEvents];
     [self.view addSubview:self.storeBtn];
 }
 
@@ -106,8 +109,15 @@
     for (id key in dict) {
         [defaults removeObjectForKey:key];
     }
-    
 }
 
+-(void)goToStore
+{
+    NSLog(@"Going to Store Now");
+//    StoreCollectionViewController *storeVC = [[StoreCollectionViewController alloc]init];
+//    [self.navigationController pushViewController:storeVC animated:NO];
+//    [self presentViewController:storeVC animated:YES completion:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.nexthometech.com/store"]];
+}
 
 @end

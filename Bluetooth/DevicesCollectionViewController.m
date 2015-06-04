@@ -180,7 +180,6 @@ static NSString * const reuseIdentifier = @"Cell";
                      animations:^() {
                          self.dashBoard.timeLabel.center = CGPointMake(125, 80);
                          self.dashBoard.AMPMLabel.center = CGPointMake(195, 80);
-                         
                      }
                      completion:^(BOOL finished) {
                      }];
@@ -303,9 +302,9 @@ static NSString * const reuseIdentifier = @"Cell";
     
     for (Device *device in self.selectedDevices)
     {
-        [device.peripheral writeValue:device.configurationEnabledData forCharacteristic:device.congigureCharacteristic type:CBCharacteristicWriteWithResponse];
-        [device.peripheral writeValue:device.offData forCharacteristic:device.onOffCharacteristic type:CBCharacteristicWriteWithResponse];
-        [device.peripheral writeValue:device.onData forCharacteristic:device.onOffCharacteristic type:CBCharacteristicWriteWithResponse];
+        [device.peripheral writeValue:device.ZhengGeeConfigurationEnabledData forCharacteristic:device.ZhengGeeCongigureCharacteristic type:CBCharacteristicWriteWithResponse];
+        [device.peripheral writeValue:device.ZhengGeeOffData forCharacteristic:device.ZhengGeeOnOffCharacteristic type:CBCharacteristicWriteWithResponse];
+        [device.peripheral writeValue:device.ZhengGeeOnData forCharacteristic:device.ZhengGeeOnOffCharacteristic type:CBCharacteristicWriteWithResponse];
     }
 }
 
@@ -396,7 +395,8 @@ static NSString * const reuseIdentifier = @"Cell";
         [cell setLogoImage:@"nextBulb"];
     }
     
-    else if ([peripheral.name hasPrefix:@"Tint B9"]) {
+    else if ([peripheral.name hasPrefix:@"Tint B9"] ||
+             [peripheral.name hasPrefix:@"B910"]) {
         cell.name.text = @"nextBulb-mega";
         [cell setLogoImage:@"nextBulb-mega"];
     }
@@ -438,14 +438,12 @@ static NSString * const reuseIdentifier = @"Cell";
 
     /* Create a device at the index path */
     if (!device.isSelected) {
-        NSLog(@"select");
         device.isSelected = true;
         [cell addRoundedButton];
         [self.selectedDevices addObject:device];
     }
     
     else {
-        NSLog(@"unselect");
         device.isSelected = false;
         [self.selectedDevices removeObject:device];
         [cell removeRounedButton];
@@ -534,28 +532,7 @@ static NSString * const reuseIdentifier = @"Cell";
 {
     for (Device *device in self.devices)
     {
-        for (CBService *service in device.peripheral.services)
-        {
-            for (CBCharacteristic *characteristic in service.characteristics) {
-                if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"FFF1"]]) {
-                    device.congigureCharacteristic = characteristic;
-                }
-                if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"FFF2"]]) {
-                    device.onOffCharacteristic = characteristic;
-                }
-                if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"FFE4"]]) {
-                    device.readCharacteristic = characteristic;
-                }
-                if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"FFE9"]]) {
-                    device.writeCharacteristic = characteristic;
-                }
-            }
-        }
-        
-        /* set the configuration characteristics to be configurable */
-        [device.peripheral writeValue:device.configurationEnabledData forCharacteristic:device.congigureCharacteristic type:CBCharacteristicWriteWithResponse];
-        /* then turn it on */
-        [device.peripheral writeValue:device.onData forCharacteristic:device.onOffCharacteristic type:CBCharacteristicWriteWithResponse];
+        [device startconfiguration];
     }
 }
 

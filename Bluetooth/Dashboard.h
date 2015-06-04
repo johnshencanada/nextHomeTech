@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VBFPopFlatButton.h"
 
 @interface Dashboard : UIView
 @property CGRect screenRect;
 @property (nonatomic) UIImageView *backgroundImageView;
 @property (nonatomic) NSString *homeName;
 @property (nonatomic) UILabel *homeLabel;
+
 @property (nonatomic) UILabel *state;
 @property (nonatomic) UILabel *timeLabel;
 @property (nonatomic) UILabel *AMPMLabel;
@@ -24,7 +26,11 @@
 
 @property (nonatomic) UIButton *lightBulb;
 @property (nonatomic) UIButton *home;
+@property (strong,nonatomic) VBFPopFlatButton *menu;
+
 @property (nonatomic) UIButton *camera;
+@property (strong,nonatomic) VBFPopFlatButton *addNewRoom;
+
 @property (nonatomic) UIButton *back;
 @property (nonatomic) UIButton *refresh;
 @property (nonatomic) UIButton *discover;

@@ -43,7 +43,7 @@
 		52D0465719662EA6004F429A /* DeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D0465619662EA6004F429A /* DeviceCell.m */; };
 		52D0465A19663254004F429A /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D0465919663254004F429A /* Device.m */; };
 		52DC62B7198F9B9500E8FE18 /* LightBulbColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DC62B6198F9B9500E8FE18 /* LightBulbColorViewController.m */; };
-		52DC62BA198F9BA400E8FE18 /* LightBulbRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DC62B9198F9BA400E8FE18 /* LightBulbRoomViewController.m */; };
+		52E7434F1B0FEDA800C92F28 /* StoreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E7434E1B0FEDA800C92F28 /* StoreCollectionViewController.m */; };
 		52E7ADF01964DA6100D8D9BE /* MyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E7ADEF1964DA6100D8D9BE /* MyNavigationController.m */; };
 		52F4037719A85F0A00879F26 /* RoomsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F4037619A85F0A00879F26 /* RoomsCollectionViewController.m */; };
 		52F4037A19A85F2600879F26 /* RoomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F4037919A85F2600879F26 /* RoomCell.m */; };
@@ -105,8 +105,8 @@
 		5248BFEE1B0B0C5D00A83DD0 /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		5256A43619C2B6DA001B5664 /* NewRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRoomViewController.h; sourceTree = "<group>"; };
 		5256A43719C2B6DA001B5664 /* NewRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRoomViewController.m; sourceTree = "<group>"; };
-		5256A43919C2B712001B5664 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		5256A43A19C2B712001B5664 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		5256A43919C2B712001B5664 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Bluetooth/HomeViewController.h; sourceTree = "<group>"; };
+		5256A43A19C2B712001B5664 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Bluetooth/HomeViewController.m; sourceTree = "<group>"; };
 		5256A43C19C3DB4D001B5664 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		5258646E1AC8984300596EC5 /* NewRoomChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRoomChildViewController.h; sourceTree = "<group>"; };
 		5258646F1AC8984300596EC5 /* NewRoomChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRoomChildViewController.m; sourceTree = "<group>"; };
@@ -121,8 +121,8 @@
 		52733B711A73265A006EA793 /* BackgroundGifViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundGifViewController.m; sourceTree = "<group>"; };
 		52733B731A736DD3006EA793 /* IntroductionChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroductionChildViewController.h; sourceTree = "<group>"; };
 		52733B741A736DD3006EA793 /* IntroductionChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroductionChildViewController.m; sourceTree = "<group>"; };
-		527870CA19C9163A00FEBAE8 /* LightBulbRoomCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LightBulbRoomCollectionViewController.h; path = Bluetooth/LightBulbRoomCollectionViewController.h; sourceTree = "<group>"; };
-		527870CB19C9163A00FEBAE8 /* LightBulbRoomCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LightBulbRoomCollectionViewController.m; path = Bluetooth/LightBulbRoomCollectionViewController.m; sourceTree = "<group>"; };
+		527870CA19C9163A00FEBAE8 /* LightBulbRoomCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightBulbRoomCollectionViewController.h; sourceTree = "<group>"; };
+		527870CB19C9163A00FEBAE8 /* LightBulbRoomCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightBulbRoomCollectionViewController.m; sourceTree = "<group>"; };
 		527870CD19C95C6100FEBAE8 /* RoomPictureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomPictureCell.h; sourceTree = "<group>"; };
 		527870CE19C95C6100FEBAE8 /* RoomPictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomPictureCell.m; sourceTree = "<group>"; };
 		527BBADD1A2BDC130097ECC6 /* RoomLogoButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomLogoButton.h; sourceTree = "<group>"; };
@@ -147,8 +147,8 @@
 		52D0465919663254004F429A /* Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
 		52DC62B5198F9B9500E8FE18 /* LightBulbColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LightBulbColorViewController.h; path = Bluetooth/LightBulbColorViewController.h; sourceTree = "<group>"; };
 		52DC62B6198F9B9500E8FE18 /* LightBulbColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LightBulbColorViewController.m; path = Bluetooth/LightBulbColorViewController.m; sourceTree = "<group>"; };
-		52DC62B8198F9BA400E8FE18 /* LightBulbRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LightBulbRoomViewController.h; path = Bluetooth/LightBulbRoomViewController.h; sourceTree = "<group>"; };
-		52DC62B9198F9BA400E8FE18 /* LightBulbRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LightBulbRoomViewController.m; path = Bluetooth/LightBulbRoomViewController.m; sourceTree = "<group>"; };
+		52E7434D1B0FEDA800C92F28 /* StoreCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreCollectionViewController.h; sourceTree = "<group>"; };
+		52E7434E1B0FEDA800C92F28 /* StoreCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCollectionViewController.m; sourceTree = "<group>"; };
 		52E7ADEE1964DA6100D8D9BE /* MyNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationController.h; sourceTree = "<group>"; };
 		52E7ADEF1964DA6100D8D9BE /* MyNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationController.m; sourceTree = "<group>"; };
 		52F4037519A85F0A00879F26 /* RoomsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomsCollectionViewController.h; sourceTree = "<group>"; };
@@ -280,26 +280,24 @@
 				52DC62B6198F9B9500E8FE18 /* LightBulbColorViewController.m */,
 				52A04DED19B1730D008EF273 /* LightBulbTimerViewController.h */,
 				52A04DEE19B1730D008EF273 /* LightBulbTimerViewController.m */,
-				52DC62B8198F9BA400E8FE18 /* LightBulbRoomViewController.h */,
-				52DC62B9198F9BA400E8FE18 /* LightBulbRoomViewController.m */,
-				527870CA19C9163A00FEBAE8 /* LightBulbRoomCollectionViewController.h */,
-				527870CB19C9163A00FEBAE8 /* LightBulbRoomCollectionViewController.m */,
 			);
 			name = nextBulb;
 			path = ..;
 			sourceTree = "<group>";
 		};
-		5247D68C1A16FEC600EE800B /* Home */ = {
+		5247D68C1A16FEC600EE800B /* Room */ = {
 			isa = PBXGroup;
 			children = (
-				5256A43919C2B712001B5664 /* HomeViewController.h */,
-				5256A43A19C2B712001B5664 /* HomeViewController.m */,
+				527870CD19C95C6100FEBAE8 /* RoomPictureCell.h */,
+				527870CE19C95C6100FEBAE8 /* RoomPictureCell.m */,
+				527870CA19C9163A00FEBAE8 /* LightBulbRoomCollectionViewController.h */,
+				527870CB19C9163A00FEBAE8 /* LightBulbRoomCollectionViewController.m */,
 				5256A43619C2B6DA001B5664 /* NewRoomViewController.h */,
 				5256A43719C2B6DA001B5664 /* NewRoomViewController.m */,
 				5258646E1AC8984300596EC5 /* NewRoomChildViewController.h */,
 				5258646F1AC8984300596EC5 /* NewRoomChildViewController.m */,
 			);
-			name = Home;
+			name = Room;
 			sourceTree = "<group>";
 		};
 		526DC4871A462B8A0054B463 /* Action */ = {
@@ -353,8 +351,6 @@
 				52B99D7B1ADF9D03004C6772 /* BlackCircle.m */,
 				527BBADD1A2BDC130097ECC6 /* RoomLogoButton.h */,
 				527BBADE1A2BDC130097ECC6 /* RoomLogoButton.m */,
-				527870CD19C95C6100FEBAE8 /* RoomPictureCell.h */,
-				527870CE19C95C6100FEBAE8 /* RoomPictureCell.m */,
 				52A279BE19AA76D200F0C597 /* StatusLabel.h */,
 				52A279BF19AA76D200F0C597 /* StatusLabel.m */,
 				52D0465519662EA6004F429A /* DeviceCell.h */,
@@ -393,11 +389,24 @@
 				52F4037619A85F0A00879F26 /* RoomsCollectionViewController.m */,
 				52D0465219662D68004F429A /* DevicesCollectionViewController.h */,
 				52D0465319662D68004F429A /* DevicesCollectionViewController.m */,
-				5247D68C1A16FEC600EE800B /* Home */,
+				52E7434C1B0FED6500C92F28 /* Setting and Store */,
+				5247D68C1A16FEC600EE800B /* Room */,
 				526DC4871A462B8A0054B463 /* Action */,
 				5247D68B1A16FE8400EE800B /* nextBulb */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		52E7434C1B0FED6500C92F28 /* Setting and Store */ = {
+			isa = PBXGroup;
+			children = (
+				5256A43919C2B712001B5664 /* HomeViewController.h */,
+				5256A43A19C2B712001B5664 /* HomeViewController.m */,
+				52E7434D1B0FEDA800C92F28 /* StoreCollectionViewController.h */,
+				52E7434E1B0FEDA800C92F28 /* StoreCollectionViewController.m */,
+			);
+			name = "Setting and Store";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		C5769B1A91854D98A969A1C3 /* Frameworks */ = {
@@ -571,6 +580,7 @@
 				521A24CA1AFFF99700AA3E6F /* ProximityViewController.m in Sources */,
 				5256A43819C2B6DA001B5664 /* NewRoomViewController.m in Sources */,
 				52D0465719662EA6004F429A /* DeviceCell.m in Sources */,
+				52E7434F1B0FEDA800C92F28 /* StoreCollectionViewController.m in Sources */,
 				52D0465A19663254004F429A /* Device.m in Sources */,
 				52733B721A73265A006EA793 /* BackgroundGifViewController.m in Sources */,
 				5226DBF01B0DB3D900370E3B /* ZhengGeeLightBulb.m in Sources */,
@@ -579,7 +589,6 @@
 				52DC62B7198F9B9500E8FE18 /* LightBulbColorViewController.m in Sources */,
 				5201847D199E1444009573B3 /* BrightnessView.m in Sources */,
 				5200820B19639C8D00B2F433 /* main.m in Sources */,
-				52DC62BA198F9BA400E8FE18 /* LightBulbRoomViewController.m in Sources */,
 				52F4037719A85F0A00879F26 /* RoomsCollectionViewController.m in Sources */,
 				527870CF19C95C6100FEBAE8 /* RoomPictureCell.m in Sources */,
 				526DC4931A462EA80054B463 /* NewActionViewController.m in Sources */,

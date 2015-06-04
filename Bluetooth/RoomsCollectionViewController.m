@@ -4,7 +4,7 @@
 //
 //  Created by john on 8/22/14.
 //  Copyright (c) 2014 nextHome Technology. All rights reserved.
-//
+
 
 //General View
 #import "RoomsCollectionViewController.h"
@@ -40,6 +40,7 @@
 @property (nonatomic) HMHome *primaryHome;
 @property (nonatomic) NSMutableArray *rooms;
 @property (nonatomic) HMAccessory *accessory;
+
 //Model
 @property (strong,nonatomic) CBCentralManager *centralManager;
 @property (strong,nonatomic) NSNumber *rssi;
@@ -110,7 +111,7 @@ static NSString * const reuseIdentifier = @"Room";
     [self.collectionView registerClass:[RoomCell class] forCellWithReuseIdentifier:@"Room"];
     [self.collectionView registerClass:[HeaderCellView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView"];
     self.dashBoard = [[Dashboard alloc]initWithFrame:CGRectMake(0, 0, self.screenRect.size.width, self.screenRect.size.height/3.5)];
-    [self.dashBoard.home addTarget:self action:@selector(goHomeButton) forControlEvents:UIControlEventAllTouchEvents];
+    [self.dashBoard.menu addTarget:self action:@selector(goHomeButton) forControlEvents:UIControlEventAllTouchEvents];
     [self.dashBoard.camera addTarget:self action:@selector(changePhoto) forControlEvents:UIControlEventAllTouchEvents];
 
     [self.view addSubview:self.dashBoard];
@@ -135,7 +136,7 @@ static NSString * const reuseIdentifier = @"Room";
 
 - (void)startRefresh:(id)sender
 {
-//    [self.centralManager scanForPeripheralsWithServices:nil options:nil];
+    [self.centralManager scanForPeripheralsWithServices:nil options:nil];
     [self checkForConnectionAndConnectPeripheral];
     [sender endRefreshing];
 }
@@ -188,9 +189,9 @@ static NSString * const reuseIdentifier = @"Room";
     /* Clear the user defaults for testing purpose */
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSDictionary * dict = [defaults dictionaryRepresentation];
-    for (id key in dict) {
-        [defaults removeObjectForKey:key];
-    }
+//    for (id key in dict) {
+//        [defaults removeObjectForKey:key];
+//    }
     
     self.rooms =  [defaults objectForKey:@"rooms"];
     if (!self.rooms) {
@@ -207,6 +208,7 @@ static NSString * const reuseIdentifier = @"Room";
 - (void)goHomeButton
 {
     HomeViewController *homeVC = [[HomeViewController alloc]init];
+//    [self.navigationController pushViewController:homeVC animated:YES];
     [self presentViewController:homeVC animated:YES completion:nil];
 }
 
@@ -254,9 +256,9 @@ static NSString * const reuseIdentifier = @"Room";
         
         for (Device *device in self.selectedDevices)
         {
-            [device.peripheral writeValue:device.configurationEnabledData forCharacteristic:device.congigureCharacteristic type:CBCharacteristicWriteWithResponse];
-            [device.peripheral writeValue:device.offData forCharacteristic:device.onOffCharacteristic type:CBCharacteristicWriteWithResponse];
-            [device.peripheral writeValue:device.onData forCharacteristic:device.onOffCharacteristic type:CBCharacteristicWriteWithResponse];
+//            [device.peripheral writeValue:device.ZhengGeeConfigurationEnabledData forCharacteristic:device.ZhengGeeCongigureCharacteristic type:CBCharacteristicWriteWithResponse];
+            [device turnOff];
+            [device turnOn];
         }
     }
 }
@@ -280,20 +282,9 @@ static NSString * const reuseIdentifier = @"Room";
 
 - (void)pushToNextBulbViewControllers
 {
-    UITabBarController *tabBarController = [[UITabBarController alloc]init];
-    tabBarController.tabBar.backgroundColor = [UIColor clearColor];
-    [tabBarController.tabBar setTintColor:[UIColor lightGrayColor]];
-    
-    LightBulbColorViewController *ColorVC = [[LightBulbColorViewController alloc]initWithDevices:self.selectedDevices];
-    ColorVC.extendedLayoutIncludesOpaqueBars = YES;
-    TimedActionCollectionViewController *TimerVC = [[TimedActionCollectionViewController alloc]initWithDevices:self.selectedDevices];
-    TimerVC.extendedLayoutIncludesOpaqueBars = YES;
     LightBulbRoomCollectionViewController *RoomVC = [[LightBulbRoomCollectionViewController alloc]initWithDevices:self.selectedDevices];
     RoomVC.extendedLayoutIncludesOpaqueBars = YES;
-    NSArray *controllers = [NSArray arrayWithObjects: RoomVC, ColorVC,TimerVC,nil];
-    tabBarController.tabBar.barStyle = UIBarStyleBlackOpaque;
-    tabBarController.viewControllers = controllers;
-    [self.navigationController pushViewController:tabBarController animated:NO];
+    [self.navigationController pushViewController:RoomVC animated:NO];
 }
 
 - (void)pushToNextDuinoViewControllers
@@ -364,7 +355,7 @@ static NSString * const reuseIdentifier = @"Room";
             cell.name.text = @"nextBulb";
             [cell setLogoImage:@"nextBulb"];
         }
-        else if ([peripheral.name hasPrefix:@"Tint B9"]) {
+        else if ([peripheral.name hasPrefix:@"Tint B9"] || [peripheral.name hasPrefix:@"B910"]) {
             cell.name.text = @"nextBulb";
             [cell setLogoImage:@"nextBulb"];
         }
@@ -426,7 +417,9 @@ static NSString * const reuseIdentifier = @"Room";
         device.name = peripheral.name;
         [self.selectedDevices addObject:device];
         
-        if ([peripheral.name hasPrefix:@"LEDnet"] || [peripheral.name hasPrefix:@"Tint"])
+        if ([peripheral.name hasPrefix:@"LEDnet"] ||
+            [peripheral.name hasPrefix:@"B910"] ||
+            [peripheral.name hasPrefix:@"Tint"])
         {
             [self pushToNextBulbViewControllers];
         }
@@ -504,7 +497,11 @@ static NSString * const reuseIdentifier = @"Room";
 //    }
 //    
     if (!existing) {
-        if ([peripheral.name hasPrefix:@"LEDnet"] || [peripheral.name hasPrefix:@"Tint"] || [peripheral.name hasPrefix:@"Coin"]) {
+        if ([peripheral.name hasPrefix:@"LEDnet"] ||
+            [peripheral.name hasPrefix:@"Tint"]   ||
+            [peripheral.name hasPrefix:@"B910"]   ||
+            [peripheral.name hasPrefix:@"Coin"])
+        {
             Device *device = [[Device alloc]init];
             device.peripheral = peripheral;
             device.name = peripheral.name;
@@ -576,21 +573,7 @@ static NSString * const reuseIdentifier = @"Room";
 {
     for (Device *device in self.Devices)
     {
-        for (CBCharacteristic *characteristic in service.characteristics)
-        {
-            if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"FFF1"]]) {
-                device.congigureCharacteristic = characteristic;
-            }
-            if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"FFF2"]]) {
-                device.onOffCharacteristic = characteristic;
-            }
-            if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"FFE4"]]) {
-                device.readCharacteristic = characteristic;
-            }
-            if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"FFE9"]]) {
-                device.writeCharacteristic = characteristic;
-            }
-        }
+        [device startconfiguration];
     }
 }
 

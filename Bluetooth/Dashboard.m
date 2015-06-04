@@ -20,13 +20,25 @@
         [self addSubview:self.backgroundImageView];
         [self setbackgroundImage:@"Ocean"];
         
-        UIImage *homeButtonImage = [UIImage imageNamed:@"home"];
-        self.home = [[UIButton alloc]initWithFrame:CGRectMake(self.screenRect.size.width/20,
-                                                              self.screenRect.size.width/16,
-                                                              self.screenRect.size.width/8,
-                                                              self.screenRect.size.width/8)];
-        [self.home setBackgroundImage:homeButtonImage forState:UIControlStateNormal];
-        [self addSubview:self.home];
+//        UIImage *homeButtonImage = [UIImage imageNamed:@"home"];
+//        self.home = [[UIButton alloc]initWithFrame:CGRectMake(self.screenRect.size.width/20,
+//                                                              self.screenRect.size.width/16,
+//                                                              self.screenRect.size.width/8,
+//                                                              self.screenRect.size.width/8)];
+//        [self.home setBackgroundImage:homeButtonImage forState:UIControlStateNormal];
+        
+        self.menu = [[VBFPopFlatButton alloc]initWithFrame:CGRectMake(self.screenRect.size.width/16,
+                                                                      self.screenRect.size.height/20,
+                                                                      self.screenRect.size.width/12,
+                                                                      self.screenRect.size.width/12)
+                                                buttonType:buttonMenuType
+                                               buttonStyle:buttonPlainStyle
+                                     animateToInitialState:YES];
+        
+        self.menu.lineThickness = 2;
+        self.menu.roundBackgroundColor = [UIColor colorWithWhite:255 alpha:1];
+        self.menu.tintColor = [UIColor lightGrayColor];
+        [self addSubview:self.menu];
         
         UIImage *cameraImage = [UIImage imageNamed:@"camera"];
         self.camera = [[UIButton alloc]initWithFrame:CGRectMake((6.5 * self.screenRect.size.width/8),
@@ -34,7 +46,7 @@
                                                                 self.screenRect.size.width/8,
                                                                 self.screenRect.size.width/8)];
         [self.camera setBackgroundImage:cameraImage forState:UIControlStateNormal];
-        [self addSubview:self.camera];
+//        [self addSubview:self.camera];
         
         self.homeLabel = [[UILabel alloc]initWithFrame:CGRectMake(0,
                                                                   self.screenRect.size.width/16,
@@ -162,7 +174,7 @@
                                                           self.screenRect.size.width/8,
                                                           self.screenRect.size.width/8)];
     [self.back setBackgroundImage:image forState:UIControlStateNormal];
-    [self.home removeFromSuperview];
+    [self.menu removeFromSuperview];
     [self addSubview:self.back];
 }
 

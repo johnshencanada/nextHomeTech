@@ -57,7 +57,10 @@ static NSString * const reuseIdentifier = @"Room";
 - (void)setUpView
 {
     self.view.backgroundColor = [UIColor clearColor];
-    self.collectionView.frame = CGRectMake(0, self.view.frame.size.height/3 - 15, 320, 350);
+    self.collectionView.frame = CGRectMake(0,
+                                           self.screenRect.size.height/3,
+                                           self.screenRect.size.width,
+                                           (2 * self.screenRect.size.height/3));
     self.collectionView.backgroundColor = [UIColor clearColor];
     [self.collectionView registerClass:[RoomPictureCell class] forCellWithReuseIdentifier:@"Room"];
     

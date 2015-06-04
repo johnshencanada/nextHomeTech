@@ -40,7 +40,7 @@
     }
     else if ([logoName isEqualToString:@"nextBulb-nano"])
     {
-        logoImage = [UIImage imageNamed:@"appliance-nextbulb"];
+        logoImage = [UIImage imageNamed:@"appliance-zhengGee"];
     }
     else if ([logoName isEqualToString:@"nextBulb"])
     {
@@ -86,26 +86,29 @@
 
 - (void)setupRounedButton
 {
-    self.flatRoundedButton = [[VBFPopFlatButton alloc]initWithFrame:CGRectMake(86,70,15,15)
+    self.flatRoundedButton = [[VBFPopFlatButton alloc]initWithFrame:CGRectMake(86,70,13,13)
                                                          buttonType:buttonForwardType
                                                         buttonStyle:buttonRoundedStyle
                                               animateToInitialState:YES];
     
     self.flatRoundedButton.lineThickness = 2;
-    self.flatRoundedButton.roundBackgroundColor = [UIColor colorWithWhite:255 alpha:1];
-    self.flatRoundedButton.tintColor = [UIColor colorWithWhite:0 alpha:0.6];
+    self.flatRoundedButton.roundBackgroundColor = [UIColor colorWithWhite:255 alpha:0.5];
+    self.flatRoundedButton.tintColor = [UIColor colorWithWhite:0 alpha:0.5];
     [self addSubview:self.flatRoundedButton];
 }
 
 - (void)addRoundedButton
 {
-    NSLog(@"add rounded button");
-    [self addSubview:self.flatRoundedButton];
+    NSLog(@"adding rounded button");
+    self.flatRoundedButton.roundBackgroundColor = [UIColor colorWithWhite:255 alpha:0.5];
+    self.flatRoundedButton.tintColor = [UIColor colorWithWhite:0 alpha:0.5];
 }
 
 - (void)removeRounedButton
 {
-    [self.flatRoundedButton removeFromSuperview];
+    NSLog(@"Removing rounded button");
+    self.flatRoundedButton.roundBackgroundColor = [UIColor colorWithWhite:255 alpha:0];
+    self.flatRoundedButton.tintColor = [UIColor colorWithWhite:0 alpha:0];
 }
 
 - (void) buttonTapped {

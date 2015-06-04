@@ -10,6 +10,7 @@
 #import "MyNavigationController.h"
 #import "BrightnessView.h"
 #import "CircleCounter.h"
+#import "NYSegmentedControl.h"
 
 @interface LightBulbColorViewController ()
 
@@ -20,7 +21,7 @@
 @property (strong,nonatomic) UIVisualEffect *vibrancyEffect;
 @property  (strong,nonatomic) UIVisualEffectView *vibrancyView;
 @property (nonatomic) BrightnessView *brightView;
-@property (strong,nonatomic) UIButton *toogleButton;
+@property (nonatomic,strong) NYSegmentedControl *colorSegmentedControl;
 @property (nonatomic) UIButton *back;
 
 @property (strong,nonatomic) UIButton *brightnessButtonSmall;
@@ -71,7 +72,7 @@
                                                    blue:255/255.0f
                                                   alpha:0.1];
     self.background.circleWidth = 24.0;
-    [self.view addSubview:self.background];
+//    [self.view addSubview:self.background];
     
     UIImage *image = [UIImage imageNamed:@"back"];
     self.back = [[UIButton alloc]initWithFrame:CGRectMake(self.screenRect.size.width/16,
@@ -82,24 +83,51 @@
     [self.view addSubview:self.back];
     [self.back addTarget:self action:@selector(goBack) forControlEvents:UIControlEventAllTouchEvents];
 
-    _colorWheel = [[ISColorWheel alloc] initWithFrame:CGRectMake(25, ((self.view.frame.size.height)/2 - 205), 270, 270)];
+    //Color Wheel
+    _colorWheel = [[ISColorWheel alloc] initWithFrame:CGRectMake(self.screenRect.size.width/11,
+                                                                 self.screenRect.size.height/11,
+                                                                  (9 * self.screenRect.size.width/11),
+                                                                  (9 * self.screenRect.size.width/11))];
     _colorWheel.delegate = self;
     _colorWheel.continuous = true;
     [self.view addSubview:_colorWheel];
     
-    self.toogleButton = [[UIButton alloc]initWithFrame:CGRectMake(110, 170, 100, 100)];
-    [self.toogleButton setBackgroundImage:[UIImage imageNamed:@"onButton"] forState:UIControlStateNormal];
-    [self.toogleButton addTarget:self action:@selector(toogleSwitch) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.toogleButton];
+    //Brightness
     [self setUpBrightnessView];
+    
+    //On Off Button
+    UIView *foursquareSegmentedControlBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(0.0,
+                                                                                                0.0,
+                                                                                                self.screenRect.size.width,
+                                                                                                self.screenRect.size.height/8)];
+    foursquareSegmentedControlBackgroundView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:foursquareSegmentedControlBackgroundView];
+    self.colorSegmentedControl = [[NYSegmentedControl alloc] initWithItems:@[@"On",@"Off"]];
+    self.colorSegmentedControl.titleTextColor = [UIColor lightGrayColor];
+    self.colorSegmentedControl.selectedTitleTextColor = [UIColor whiteColor];
+    self.colorSegmentedControl.selectedTitleFont = [UIFont systemFontOfSize:18.0f];
+    self.colorSegmentedControl.segmentIndicatorBackgroundColor = [UIColor colorWithRed:0.31f green:0.53f blue:0.72f alpha:0.7];
+    self.colorSegmentedControl.backgroundColor = [UIColor colorWithRed:0.31f green:0.53f blue:0.72f alpha:0.1];
+    self.colorSegmentedControl.borderWidth = 0.0f;
+    self.colorSegmentedControl.segmentIndicatorBorderWidth = 0.0f;
+    self.colorSegmentedControl.segmentIndicatorInset = 1.0f;
+    self.colorSegmentedControl.segmentIndicatorBorderColor = self.view.backgroundColor;
+    [self.colorSegmentedControl sizeToFit];
+    self.colorSegmentedControl.cornerRadius = CGRectGetHeight(self.colorSegmentedControl.frame) / 2.0f;
+    self.colorSegmentedControl.center = CGPointMake(self.view.center.x,
+                                                    self.view.center.y + self.screenRect.size.height/8);
+    foursquareSegmentedControlBackgroundView.center = self.colorSegmentedControl.center;
+    [self.colorSegmentedControl addTarget:self action:@selector(segmentSelected:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:self.colorSegmentedControl];
+
 }
 
-- (void)goBack
+- (void) goBack
 {
     [self.navigationController popViewControllerAnimated:NO];
 }
 
-- (void) setUpBlurAndVibrancy
+- (void)setUpBlurAndVibrancy
 {
     self.nav = (MyNavigationController*)self.navigationController;
     self.vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:self.nav.blurEffect];
@@ -117,7 +145,6 @@
     self.titleLabel.font = [UIFont fontWithName:@"GillSans-Light" size:20.0];
     self.titleLabel.text = [NSString stringWithFormat:@"Change Color"];
     [self.view addSubview:self.titleLabel];
-
     
     UIImage *brightnessImage = [UIImage imageNamed:@"brightness"];
     UIImage *warmImage = [UIImage imageNamed:@"warm"];
@@ -183,9 +210,11 @@
 {
     CGFloat red = 0.0, green = 0.0, blue = 0.0, alpha =0.0;
     [_colorWheel.currentColor getRed:&red green:&green blue:&blue alpha:&alpha];
-    [self.background setColor:[UIColor colorWithRed:red green:green blue:blue alpha:0.5]];
     [self.brightSlider setPopUpViewColor:[UIColor colorWithRed:red green:green blue:blue alpha:0.5]];
     [self.warmSlider setPopUpViewColor:[UIColor colorWithRed:red green:green blue:blue alpha:0.5]];
+    self.titleLabel.textColor = [UIColor colorWithRed:red green:green blue:blue alpha:0.7];
+    self.colorSegmentedControl.segmentIndicatorBackgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:0.7];
+    self.colorSegmentedControl.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:0.1];
 
     self.red = (int)(red * 255);
     self.green = (int)(green * 255);
@@ -196,23 +225,23 @@
     }
 }
 
-- (void)toogleSwitch
+
+- (void)segmentSelected:(NYSegmentedControl*)foursquareSegmentedControl
 {
+    int index = (int)foursquareSegmentedControl.selectedSegmentIndex;
     
-    if (!self.isOn) {
-        [self.toogleButton setBackgroundImage:[UIImage imageNamed:@"onButton"] forState:UIControlStateNormal];
-        [self.background setColor:[UIColor colorWithRed:255 green:255 blue:255 alpha:0.5]];
-        for(Device *device in self.devices) {
-            [device.peripheral writeValue:device.onData forCharacteristic:device.onOffCharacteristic type:CBCharacteristicWriteWithResponse];
+    if (index == 0)
+    {
+        for (Device *device in self.devices) {
+            [device turnOff];
+            [device turnOn];
         }
-        self.isOn = true;
     }
     
-    else {
-        [self.toogleButton setBackgroundImage:[UIImage imageNamed:@"offButton"] forState:UIControlStateNormal];
-        [self.background setColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.5]];
-        for(Device *device in self.devices) {
-            [device.peripheral writeValue:device.offData forCharacteristic:device.onOffCharacteristic type:CBCharacteristicWriteWithResponse];
+    else if (index == 1)
+    {
+        for (Device *device in self.devices) {
+            [device turnOff];
         }
         self.isOn = false;
     }
@@ -225,10 +254,10 @@
     [self.warmSlider setPopUpViewColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.5]];
     [self.background setColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.3]];
     self.red=self.green=self.blue = 0;
+    
     for (Device *device in self.devices) {
         self.brightSlider.value = 0;
         [device changeBrightness:15 WithRed:0 andGreen:0 andBlue:0 brightness:YES];
-        [device.peripheral writeValue:device.ZhengGeeColorData forCharacteristic:device.writeCharacteristic type:CBCharacteristicWriteWithResponse];
     }
 }
 
@@ -239,10 +268,10 @@
     [self.warmSlider setPopUpViewColor:[UIColor colorWithRed:255 green:255 blue:255 alpha:0.5]];
     [self.background setColor:[UIColor colorWithRed:255 green:255 blue:255 alpha:0.5]];
     self.red=self.green=self.blue = 0;
+    
     for (Device *device in self.devices) {
         self.brightSlider.value = 100;
         [device changeBrightness:255 WithRed:0 andGreen:0 andBlue:0 brightness:YES];
-        [device.peripheral writeValue:device.ZhengGeeColorData forCharacteristic:device.writeCharacteristic type:CBCharacteristicWriteWithResponse];
     }
 }
 
@@ -254,12 +283,10 @@
         
         if (self.red||self.blue||self.green) {
             [device changeBrightness:15+(int)(240*value) WithRed:self.red andGreen:self.green andBlue:self.blue brightness:NO];
-            [device.peripheral writeValue:device.ZhengGeeColorData forCharacteristic:device.writeCharacteristic type:CBCharacteristicWriteWithResponse];
         }
         
         else {
             [device changeBrightness:15+(int)(240*value) WithRed:self.red andGreen:self.green andBlue:self.blue brightness:YES];
-            [device.peripheral writeValue:device.ZhengGeeColorData forCharacteristic:device.writeCharacteristic type:CBCharacteristicWriteWithResponse];
         }
     }
     
